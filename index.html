@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia Studieguide — HIST1BNA25MA</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parch: #f5f0e8;
+    --ink: #1a1208;
+    --sepia: #8b6914;
+    --rust: #a0522d;
+    --crimson: #7b1d1d;
+    --forest: #1f3d2e;
+    --gold: #c9a227;
+    --muted: #6b5b3e;
+    --card: #fffdf7;
+    --border: #d4b896;
+    --shadow: rgba(26,18,8,0.12);
+    --blue-dark: #1a2744;
+    --highlight: #fff3cd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body {
+    background: var(--parch);
+    color: var(--ink);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.75;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a227' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+ 
+  /* HEADER */
+  .site-header {
+    background: linear-gradient(135deg, #1a1208 0%, #2d1f0a 50%, #1a1208 100%);
+    color: var(--parch);
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--gold);
+  }
+  .site-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201,162,39,0.15) 0%, transparent 70%);
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    position: relative;
+    color: var(--gold);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  .site-header .sub {
+    font-size: 1rem;
+    color: rgba(245,240,232,0.7);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+    position: relative;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--crimson);
+    color: #fff;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+ 
+  /* TAB NAV */
+  .tab-nav {
+    background: var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--gold);
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  .tab-btn {
+    background: none;
+    border: none;
+    color: rgba(245,240,232,0.6);
+    font-family: 'EB Garamond', serif;
+    font-size: 0.9rem;
+    padding: 0.9rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+  }
+  .tab-btn:hover { color: var(--gold); background: rgba(201,162,39,0.08); }
+  .tab-btn.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    background: rgba(201,162,39,0.12);
+    font-weight: 600;
+  }
+ 
+  /* CONTENT */
+  .tab-content { display: none; max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .tab-content.active { display: block; }
+ 
+  /* SECTION */
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem 2.2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    position: relative;
+  }
+  .section::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--gold), var(--sepia));
+    border-radius: 4px 0 0 4px;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    color: var(--crimson);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+  .section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--blue-dark);
+    margin: 1.5rem 0 0.6rem;
+  }
+  .section h4 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--sepia);
+    margin: 1.2rem 0 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  p { margin-bottom: 0.8rem; }
+  ul, ol { padding-left: 1.5rem; margin-bottom: 0.8rem; }
+  li { margin-bottom: 0.35rem; }
+ 
+  /* CALLOUT */
+  .callout {
+    background: linear-gradient(135deg, #fff8e1, #fff3cd);
+    border-left: 4px solid var(--gold);
+    padding: 1rem 1.2rem;
+    border-radius: 0 4px 4px 0;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #5a4010;
+  }
+  .callout.danger {
+    background: linear-gradient(135deg, #fff0f0, #ffe8e8);
+    border-left-color: var(--crimson);
+    color: var(--crimson);
+    font-style: normal;
+    font-weight: 600;
+  }
+  .callout.info {
+    background: linear-gradient(135deg, #e8f0ff, #ddeeff);
+    border-left-color: #1a2744;
+    color: #1a2744;
+    font-style: normal;
+  }
+ 
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.92rem; }
+  th {
+    background: var(--ink);
+    color: var(--gold);
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.88rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  td { padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: rgba(201,162,39,0.05); }
+  tr:hover td { background: rgba(201,162,39,0.1); }
+ 
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 2.5rem; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.7rem; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--gold), var(--sepia));
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 1.4rem;
+    padding: 1rem 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: 0 1px 4px var(--shadow);
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -2.05rem;
+    top: 1.1rem;
+    width: 14px; height: 14px;
+    background: var(--gold);
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+  }
+  .tl-year {
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--crimson);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .tl-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0.1rem 0;
+  }
+  .tl-text { font-size: 0.93rem; color: var(--muted); }
+ 
+  /* COMPARISON BOX */
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1rem 0; }
+  .compare-box {
+    padding: 1.2rem;
+    border-radius: 4px;
+    border: 1px solid;
+  }
+  .compare-box.left { border-color: var(--sepia); background: linear-gradient(135deg, #fff8f0, #fdf5ec); }
+  .compare-box.right { border-color: var(--blue-dark); background: linear-gradient(135deg, #f0f4ff, #edf2ff); }
+  .compare-box h4 { font-size: 1rem; margin-top: 0; }
+ 
+  /* PHILOSOPHER CARDS */
+  .phil-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin: 1rem 0; }
+  .phil-card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.2rem;
+    background: var(--card);
+    box-shadow: 0 1px 4px var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .phil-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+  .phil-card.more::before { background: #4a7c59; }
+  .phil-card.hobbes::before { background: #7b1d1d; }
+  .phil-card.locke::before { background: #1a3a6b; }
+  .phil-card.rousseau::before { background: #6b3a1f; }
+  .phil-card.voltaire::before { background: #5a5a00; }
+  .phil-card.montesquieu::before { background: #2d5a6b; }
+  .phil-card.paine::before { background: #4a1a6b; }
+  .phil-card h3 { margin-top: 0.3rem; font-size: 1.1rem; }
+  .tag {
+    display: inline-block;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    vertical-align: middle;
+  }
+  .tag-lib { background: #ddeeff; color: #1a3a6b; }
+  .tag-soc { background: #ddffd5; color: #1a4a20; }
+  .tag-dem { background: #fff0dd; color: #6b3a00; }
+  .tag-des { background: #ffdddd; color: #7b1d1d; }
+  .tag-rep { background: #f0ddff; color: #4a0080; }
+ 
+  /* HELL CIRCLES */
+  .hell-container { position: relative; }
+  .hell-circle {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    padding: 0.9rem 1rem;
+    border-radius: 4px;
+    border: 1px solid;
+    transition: transform 0.15s;
+  }
+  .hell-circle:hover { transform: translateX(4px); }
+  .circle-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    min-width: 2.5rem;
+    text-align: center;
+    line-height: 1;
+    margin-top: 0.2rem;
+  }
+  .c1 { background: #f0f8ff; border-color: #a0b8d0; } .c1 .circle-num { color: #4a7a9b; }
+  .c2 { background: #fff0f8; border-color: #d0a0b8; } .c2 .circle-num { color: #9b4a7a; }
+  .c3 { background: #fffdf0; border-color: #c0b890; } .c3 .circle-num { color: #8a7a30; }
+  .c4 { background: #f8fff0; border-color: #a0c080; } .c4 .circle-num { color: #4a8a20; }
+  .c5 { background: #fff5f0; border-color: #c08060; } .c5 .circle-num { color: #9b5020; }
+  .c6 { background: #f8f0ff; border-color: #b090c0; } .c6 .circle-num { color: #6a3a8b; }
+  .c7 { background: #fff0f0; border-color: #c07070; } .c7 .circle-num { color: #8b2020; }
+  .c8 { background: #1a0a00; border-color: #5a3000; } .c8 .circle-num { color: #ff8800; }
+  .c8 .circle-info h4 { color: #ffaa44; }
+  .c8 .circle-info p { color: #cc8855; }
+  .c8 .bolge-list { color: #bb7744; }
+  .c9 { background: #000a14; border-color: #002244; } .c9 .circle-num { color: #4499ff; }
+  .c9 .circle-info h4 { color: #66aaff; }
+  .c9 .circle-info p { color: #4488cc; }
+ 
+  /* QUIZ */
+  .quiz-q {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 4px var(--shadow);
+  }
+  .quiz-q .qnum {
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--sepia);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .quiz-q p { font-weight: 500; margin: 0.3rem 0 0.7rem; }
+  .quiz-q .options label {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    margin: 0.2rem 0;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 0.95rem;
+  }
+  .quiz-q .options label:hover { background: var(--highlight); border-color: var(--gold); }
+  .quiz-q .options input { margin-right: 0.5rem; }
+  .quiz-answer {
+    display: none;
+    margin-top: 0.7rem;
+    padding: 0.6rem 0.9rem;
+    background: linear-gradient(135deg, #e8fff0, #d5ffe8);
+    border-left: 3px solid #2a7a2a;
+    border-radius: 0 3px 3px 0;
+    font-size: 0.93rem;
+    color: #1a4a1a;
+  }
+  .show-answer-btn {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.9rem;
+    background: var(--ink);
+    color: var(--gold);
+    border: none;
+    border-radius: 3px;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.78rem;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+  }
+  .show-answer-btn:hover { background: var(--crimson); }
+ 
+  .analysis-q {
+    background: linear-gradient(135deg, var(--card), #fdf8f0);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--crimson);
+    border-radius: 0 4px 4px 0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .analysis-q .qnum { color: var(--crimson); font-family: 'Fira Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  .analysis-q h3 { font-family: 'Playfair Display', serif; color: var(--crimson); margin: 0.3rem 0 0.8rem; }
+  .key-points { background: rgba(201,162,39,0.1); border: 1px solid var(--gold); border-radius: 4px; padding: 1rem 1.2rem; margin-top: 0.8rem; }
+  .key-points h4 { color: var(--sepia); font-size: 0.9rem; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; }
+ 
+  /* HOME GRID */
+  .overview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1rem 0; }
+  .overview-card {
+    padding: 1.2rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 4px var(--shadow);
+  }
+  .overview-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px var(--shadow); border-color: var(--gold); }
+  .overview-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .overview-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--crimson); margin-bottom: 0.3rem; }
+  .overview-card p { font-size: 0.85rem; color: var(--muted); margin: 0; }
+ 
+  .checklist {
+    background: linear-gradient(135deg, #1a1208, #2d1f0a);
+    color: var(--parch);
+    padding: 1.5rem 2rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border: 1px solid var(--gold);
+  }
+  .checklist h3 { color: var(--gold); font-family: 'Playfair Display', serif; margin-bottom: 1rem; }
+  .checklist li { margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .check-done { color: #66dd66; }
+ 
+  /* KANOT model */
+  .kanot { display: grid; grid-template-columns: repeat(5,1fr); gap: 0.6rem; margin: 1rem 0; }
+  .kanot-item { text-align: center; padding: 1rem 0.5rem; border-radius: 4px; border: 1px solid var(--border); background: var(--card); }
+  .kanot-item .letter { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--crimson); display: block; }
+  .kanot-item .word { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--sepia); font-family: 'Fira Mono', monospace; }
+ 
+  code {
+    font-family: 'Fira Mono', monospace;
+    background: rgba(201,162,39,0.15);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
+    font-size: 0.88em;
+    color: var(--sepia);
+  }
+ 
+  @media (max-width: 600px) {
+    .compare-grid { grid-template-columns: 1fr; }
+    .kanot { grid-template-columns: repeat(3,1fr); }
+    .site-header h1 { font-size: 1.8rem; }
+    .tab-btn { font-size: 0.78rem; padding: 0.7rem 0.7rem; }
+    .section { padding: 1.2rem; }
+  }
+ 
+  /* Scroll progress */
+  .progress-bar {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: linear-gradient(to right, var(--gold), var(--crimson));
+    z-index: 9999; transition: width 0.1s;
+    width: 0%;
+  }
+  .sticky-note {
+    background: #fff9c4;
+    border: 1px solid #e0c820;
+    padding: 0.8rem 1rem;
+    border-radius: 2px;
+    margin: 0.8rem 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #5a4a00;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  .sticky-note::before { content: '📌 '; }
+  .summary-box {
+    background: linear-gradient(135deg, #1a2744, #0d1a3a);
+    color: #ccd9ff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border: 1px solid #2a3a6a;
+  }
+  .summary-box h4 { color: #88aaff; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; }
+</style>
+</head>
+<body>
+<div class="progress-bar" id="prog"></div>
+ 
+<header class="site-header">
+  <h1>⚔️ Historia Elias — Den Ultimata Studieguiden</h1>
+  <div class="sub">Nya tider, Nya världar · 1400–1800-tal</div>
+  <div class="badge">HIST1BNA25MA · Prov 7 maj 2026</div>
+</header>
+ 
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('hem')">🏠 Hem</button>
+  <button class="tab-btn" onclick="showTab('geo')">🌍 Geo. Upptäckter</button>
+  <button class="tab-btn" onclick="showTab('ideer')">🔭 Idéer & Vetenskap</button>
+  <button class="tab-btn" onclick="showTab('filosofer')">📜 Filosoferna</button>
+  <button class="tab-btn" onclick="showTab('revolutioner')">🔥 Revolutionerna</button>
+  <button class="tab-btn" onclick="showTab('industri')">⚙️ Industrialisering</button>
+  <button class="tab-btn" onclick="showTab('sverige')">👑 Sverige 1600-tal</button>
+  <button class="tab-btn" onclick="showTab('dante')">🔥 Dantes Helvete</button>
+  <button class="tab-btn" onclick="showTab('prov')">✏️ Provträning</button>
+</nav>
+ 
+<!-- ========== HEM ========== -->
+<div id="hem" class="tab-content active">
+  <div class="section">
+    <h2>📋 Provchecklistan</h2>
+    <div class="checklist">
+      <h3>Vad provet innehåller</h3>
+      <ul>
+        <li class="check-done">✅ 10 kryssfrågor</li>
+        <li class="check-done">✅ 3 analysfrågor</li>
+        <li class="check-done">✅ Utslagsfråga: Rita alla 9 kretsar i helvetet (Dante)</li>
+      </ul>
+      <h3 style="margin-top:1rem;">Ämnesområden du måste kunna</h3>
+      <ul>
+        <li>🌍 Varför började världsomseglingarna? Ny geografisk världsbild?</li>
+        <li>🔭 Hur samspelade vetenskapsmän + idémässig utveckling?</li>
+        <li>📜 Varför började idéer utvecklas? Jämför tänkarna!</li>
+        <li>⚔️ Orsak och effekt av revolutionerna — skillnader i deltagare + orsak/verkan?</li>
+        <li>⚙️ Orsak–effekt av industriella revolutionen?</li>
+        <li>👑 Maktkamp kung–adel i Sverige 1600-tal: metoder + effekter?</li>
+        <li>🔥 Rita i detalj alla 9 kretsar i helvetet</li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <h2>📚 Navigera studieguiden</h2>
+    <p>Klicka på ett kort för att hoppa direkt till det ämnet.</p>
+    <div class="overview-grid">
+      <div class="overview-card" onclick="showTab('geo')">
+        <div class="icon">🌍</div>
+        <h3>Geografiska Upptäckter</h3>
+        <p>1400–1500-tal. Drivkrafter, resenärer, Tordesillas, conquistadorer, Spaniens fall.</p>
+      </div>
+      <div class="overview-card" onclick="showTab('ideer')">
+        <div class="icon">🔭</div>
+        <h3>Vetenskaplig Revolution</h3>
+        <p>Geocentrisk → heliocentrisk. Copernicus, Kepler, Galileo, Newton + Reformationen.</p>
+      </div>
+      <div class="overview-card" onclick="showTab('filosofer')">
+        <div class="icon">📜</div>
+        <h3>Upplysningsfilosoferna</h3>
+        <p>More, Hobbes, Locke, Rousseau, Voltaire, Montesquieu, Paine. Djupjämförelse.</p>
+      </div>
+      <div class="overview-card" onclick="showTab('revolutioner')">
+        <div class="icon">🔥</div>
+        <h3>Revolutionerna</h3>
+        <p>Amerikanska (1776) + Franska (1789). Orsaker, förlopp, konsekvenser, skillnader.</p>
+      </div>
+      <div class="overview-card" onclick="showTab('industri')">
+        <div class="icon">⚙️</div>
+        <h3>Industriella Revolutionen</h3>
+        <p>KANOT-modellen. Adam Smith. Sociala konsekvenser. Ludditer. Sverige.</p>
+      </div>
+      <div class="overview-card" onclick="showTab('sverige')">
+        <div class="icon">👑</div>
+        <h3>Sverige 1600-tal</h3>
+        <p>Adel vs Kung. Oxenstierna, kollegier, Kristina, Karl X/XI, Reduktionen, Envälde.</p>
+      </div>
+      <div class="overview-card" onclick="showTab('dante')">
+        <div class="icon">🔥</div>
+        <h3>Dantes Helvete</h3>
+        <p>Alla 9 kretsar i detalj. Synderna, de bestraffade, platsen. Rita-guide.</p>
+      </div>
+      <div class="overview-card" onclick="showTab('prov')">
+        <div class="icon">✏️</div>
+        <h3>Provträning</h3>
+        <p>10 kryssfrågor + 3 fullständiga analysfrågor med modellsvar.</p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <h2>🗓️ Kronologisk Översikt — Hela Kursen</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">500–1453</div><div class="tl-title">Medeltiden</div><div class="tl-text">Feodalism, kyrkans makt, geocentrisk världsbild, Ptolemaios-Aristoteles-kristen teologi som ett.</div></div>
+      <div class="tl-item"><div class="tl-year">1453</div><div class="tl-title">Konstantinopels fall</div><div class="tl-text">Osmaner erövrar Konstantinopel. Handelsrutten till Asien stängs. Utlöser geografiska upptäcktsresorna. Renässansen tar fart.</div></div>
+      <div class="tl-item"><div class="tl-year">1487–1522</div><div class="tl-title">De geografiska upptäckterna</div><div class="tl-text">Díaz → Cape of Good Hope. Columbus → Amerika. Vasco da Gama → Indien. Magellan → världsomseglingen.</div></div>
+      <div class="tl-item"><div class="tl-year">1494</div><div class="tl-title">Tordesillasfördraget</div><div class="tl-text">Spanien och Portugal delar upp världen med en linje. Zaragozafördraget 1529 kompletterar med baksidan.</div></div>
+      <div class="tl-item"><div class="tl-year">1516</div><div class="tl-title">Thomas More: Utopia</div><div class="tl-text">Föregångare till socialism — gemensamt ägande, 6h arbetsdag, jämlikhet.</div></div>
+      <div class="tl-item"><div class="tl-year">1517–1648</div><div class="tl-title">Reformationen + 30-åriga kriget</div><div class="tl-text">Luther spränger katolska kyrkan. Protestantism + kalvinism. Westfaliska freden 1648 — Sverige stormakt.</div></div>
+      <div class="tl-item"><div class="tl-year">1543</div><div class="tl-title">Copernicus: Heliocentrisk världsbild</div><div class="tl-text">Solen i centrum. Boken förbjuds 1616. Kepler (ellipser), Galileo (teleskop, husarrest), Newton (gravitation) följer.</div></div>
+      <div class="tl-item"><div class="tl-year">1611–1694</div><div class="tl-title">Maktkamp adel–kung i Sverige</div><div class="tl-text">Oxenstierna, kollegiesystemet, Kristinas abdikation, Reduktionen, Karl XI envälde 1694.</div></div>
+      <div class="tl-item"><div class="tl-year">1651–1762</div><div class="tl-title">Upplysningsfilosoferna</div><div class="tl-text">Hobbes (Leviathan), Locke (tabula rasa), Rousseau (allmänvilja), Voltaire (upplyst despot), Montesquieu (maktdelning), Paine.</div></div>
+      <div class="tl-item"><div class="tl-year">1773–1783</div><div class="tl-title">Amerikanska revolutionen</div><div class="tl-text">Boston Tea Party 1773 → Självständighetsförklaring 4 juli 1776 → USA erkänt 1783 → Konstitution 1789.</div></div>
+      <div class="tl-item"><div class="tl-year">1789–1799</div><div class="tl-title">Franska revolutionen</div><div class="tl-text">Bastiljen stormas 14 juli 1789. Kungen avrättas 1793. Skräckväldet. Napoleon tar makten 1799.</div></div>
+      <div class="tl-item"><div class="tl-year">1760–1830</div><div class="tl-title">Industriella revolutionen (England)</div><div class="tl-text">Ångmaskinen, Spinning Jenny, fabriksystem. Sociala konsekvenser. Sverige industrialiseras från 1860-tal.</div></div>
+    </div>
+  </div>
+</div>
+ 
+<!-- ========== GEO DISCOVERIES ========== -->
+<div id="geo" class="tab-content">
+  <div class="section">
+    <h2>🌍 Varför Började Världsomseglingarna?</h2>
+    <div class="callout danger">⚠️ KÄRNFRÅGA: Kunna orsak → verkan-kedjan och alla fyra drivkraftstyperna!</div>
+ 
+    <h3>De Fyra Drivkrafterna (PETI)</h3>
+    <table>
+      <tr><th>Typ</th><th>Förklaring</th><th>Exempel</th></tr>
+      <tr><td><strong>Politiska</strong></td><td>Makt, kontroll, tävling, prestige</td><td>Osmanska rikets tullar stänger handelsrutten → behov av ny väg. Tävling Portugal vs Spanien.</td></tr>
+      <tr><td><strong>Ekonomiska</strong></td><td>Handel, lyxvaror, guld och silver</td><td>1453: Konstantinopels fall → lyxvaror från Asien (kryddor, siden) försvinner. Merkantilism: nollsummespel → ta resurser!</td></tr>
+      <tr><td><strong>Tekniska</strong></td><td>Bättre skepp, navigation</td><td>Karaveller (djupgående, stabila). Sextant (muslimsk uppfinning). Kompass. Bättre kartor. Större koggar med tung ballast.</td></tr>
+      <tr><td><strong>Idémässiga</strong></td><td>Nyfikenhet, renässans, prestige</td><td>Renässansens nyfikenhet. Vilja att förstå Guds skapelse. Kuriosakabinetter. Marco Polos berättelser (1271–1295).</td></tr>
+    </table>
+ 
+    <h3>Den Avgörande Utlösaren: Konstantinopels Fall 1453</h3>
+    <p>Det ostromarska rikets sista stad föll för de muslimska osmanerna 1453. Det stängde den viktigaste handelsrutten för lyxvaror — siden, ädelstenar, guld och kryddor — från Asien till Europa. De europeiska hoven, vars statussymboler var direkt beroende av dessa varor, fick panik. En ny väg till Indien måste hittas. Portugal och Spanien rustade expeditioner och konkurrerade med varandra om att hitta denna väg.</p>
+ 
+    <div class="callout info">💡 MERKANTILISM = Nollsummespel: Det finns bara en kaka (resurser/ädelmetaller). Det gäller att ta sin del FÖRST. Stater tävlar om att erövra mark och råvaror innan konkurrenterna gör det.</div>
+ 
+    <h3>Kronologi: De Geografiska Upptäckterna</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">1271–1295</div><div class="tl-title">Marco Polo — reser till Kina</div><div class="tl-text">Venetiansk diplomat. Dokumenterar Asiens rikedomar i dagbok. Kopieras av munkar och sprids i Europa. Visar att världen utanför Europa är mer avancerad. Första fröet till sekularisering.</div></div>
+      <div class="tl-item"><div class="tl-year">1487</div><div class="tl-title">Bartolomeo Díaz — Afrikas sydspets</div><div class="tl-text">Seglar längs Afrikas kust, når sydspetsen men tvingas vända pga svåra stormar. Kallar platsen "Stormudden" (Cabo Tormentoso). Näste sjöfarare döper om till "Godahoppsudden" (Cape of Good Hope). Díaz dör i storm vid sitt andra försök 1500.</div></div>
+      <div class="tl-item"><div class="tl-year">1492</div><div class="tl-title">Kristoffer Columbus — Amerika (tror det är Indien)</div><div class="tl-text">Seglar västerut för Spansk räkning. Provanterar för ca 2 veckor. Når Centralamerika. Kallar folket "indier". Hittar inga kryddor eller handel. Dör övertygad om att han hittat Indien (för att slippa betala tillbaka pengarna). Amerigo Vespucci bevisar senare att det är en "Ny värld".</div></div>
+      <div class="tl-item"><div class="tl-year">1494</div><div class="tl-title">Tordesillasfördraget</div><div class="tl-text">Katolska kyrkan delar upp världen. Spanien koloniserar väster om linjen, Portugal öster. Tvådimensionell ordning → Zaragozafördraget 1529 sätter gräns på baksidan av jordklotet.</div></div>
+      <div class="tl-item"><div class="tl-year">1497</div><div class="tl-title">Vasco da Gama — Indien via Afrika</div><div class="tl-text">Hittar sjövägen runt Afrika. Når Goa i Indien 1498. Öppnar kryddhandelsrutten. Portugal bygger ett havsimperium av handelsstationer längs kusterna.</div></div>
+      <div class="tl-item"><div class="tl-year">1497</div><div class="tl-title">John Cabot — Nordamerika (Kanada)</div><div class="tl-text">Studerat Leif Erikssons resor. Döper nordöstra Nordamerika till "Nya Indien". Besviken — kallt och isigt istället för varmt handelsindianska.</div></div>
+      <div class="tl-item"><div class="tl-year">ca 1500</div><div class="tl-title">Amerigo Vespucci — Sydamerikas kust</div><div class="tl-text">Åker ned längs Sydamerika. Drar slutsatsen att det INTE är Indien — det stämmer inte med alla nya kartor. Amerika döps efter honom.</div></div>
+      <div class="tl-item"><div class="tl-year">ca 1513</div><div class="tl-title">Balboa — Panama och Stilla havet</div><div class="tl-text">Tar sig till Panamanäsets smalaste punkt. Klättrar upp, ser "Södra Havet" — döper det till Stilla Havet för att det är ovanligt lugnt just där. Tar havet i Spaniens namn. Bevisar att det finns mer värld bakom Amerika.</div></div>
+      <div class="tl-item"><div class="tl-year">1519–1521</div><div class="tl-title">Hernán Cortez — erövrar aztekerna</div><div class="tl-text">Ca 508 soldater. Bränner skeppen (hitta eller försvinna). Utnyttjar profetia om guden Quetzalcoatl. Kommunicerar via Jerónimo de Aguilar + La Malinche (3 led). Kidnapper Montezuma, kräver guld, sviker löftet. Aztekerna mördas. Långsiktigt: 21 av 22 miljoner i ursprungsbefolkningen dör av europeiska sjukdomar.</div></div>
+      <div class="tl-item"><div class="tl-year">1519–1522</div><div class="tl-title">Magellan — Världens första världsomsegling</div><div class="tl-text">Beräknad tid över Stilla havet: 2 veckor. Faktisk tid: 13 veckor. 2 av 5 båtar rymde. 1/3 av besättningen dör av svält. Missar alla bebodda öar. Magellan dör i Filippinerna av stamhövdingens lans. Ca 30 av flera hundra man återvänder till Spanien. BEVISAR att jorden är rund och att världen är FÖR STOR.</div></div>
+      <div class="tl-item"><div class="tl-year">1533</div><div class="tl-title">Francisco Pizarro — erövrar Inkariket</div><div class="tl-text">180 soldater. Inbördeskrig + sjukdomar har redan försvagat riket (20 miljoner invånare). Förhandlar, tillfångatar inkan, kräver rum fyllt med guld (lösen), dödar inkan ändå. Inkariket faller.</div></div>
+    </div>
+  </div>
+ 
+  <div class="section">
+    <h2>Hur Kunde Så Få Besegra Så Många?</h2>
+    <table>
+      <tr><th>Faktor</th><th>Förklaring</th></tr>
+      <tr><td>🦠 Sjukdomar</td><td>Smittkoppor, mässling, kikhosta — ursprungsbefolkningen hade inget immunförsvar. Spred sig INNAN européerna ens anlänt till alla platser.</td></tr>
+      <tr><td>🔫 Militär överlägsenhet</td><td>Skjutvapen, kanoner, stålsvärd, hästar — för inkariket var hästar helt okända och skrämmande.</td></tr>
+      <tr><td>🤝 Inhemska allierade</td><td>Cortez utnyttjade rivalitet mellan stammar som hatade aztekerna. Fick tusentals lokala krigare.</td></tr>
+      <tr><td>😴 Underskattning</td><td>Ledarna tog inte hotet på allvar i tid. Aztekerna trodde inledningsvis att spanjorerna var gudar.</td></tr>
+      <tr><td>🌀 Splittring</td><td>Inkariket var mitt i inbördeskrig när Pizarro ankom — halverat, demoraliserat.</td></tr>
+      <tr><td>🏰 Döda ledarna</td><td>Cortez och Pizarro kidnappade och dödade ledarna — utan centrum kollapsade organisationen.</td></tr>
+    </table>
+ 
+    <h3>Spaniens Uppgång och Fall — Ett Ekonomihistoriskt Paradigmfall</h3>
+    <p>Spanien och Portugal var 1500-talets rikaste makter. Sedan kollapsade Spanien ekonomiskt:</p>
+    <ol>
+      <li>Silvret från gruvan <strong>Potosí</strong> i Bolivia (runt 1530-50-tal) översvämmar den europeiska marknaden</li>
+      <li>→ Inflation: silvret tappar i värde, Europa höjer priserna (spanjorerna har ändå råd)</li>
+      <li>→ Spanien slutar tillverka, uppfinna och producera militärt material — allt köps för silver</li>
+      <li>→ Gruvan sinar ca 1550-60-tal. Nu kan Spanien inte köpa (för dyrt) och inte sälja (producerar ingenting)</li>
+      <li>→ <strong>1588: Den Oövervinnliga Armadan</strong> krossas av engelsmännen i La Manche</li>
+      <li>→ <em>Don Quijote</em> (1605/1615) = Cervantes satir om en sorgsen riddare som lever på gamla minnen = Spanien</li>
+    </ol>
+    <div class="callout">💡 Poängen: Rikedom utan produktion är självförstörande. Det är ett tidigt empiriskt bevis för att resursberoende utan produktionsutveckling leder till ekonomisk kollaps.</div>
+ 
+    <h3>Imperiernas Struktur</h3>
+    <div class="compare-grid">
+      <div class="compare-box left">
+        <h4>🇵🇹 Portugisiskt Imperium</h4>
+        <p><strong>Typ:</strong> Havsimperium</p>
+        <p>Erövrade städer och handelsstationer VID KUSTERNA. Kontrollerade handeln utan att ta mark. Goa, Macao, Mozambique etc. Om du kontrollerar hamnstaden undviker du tullar och kontrollerar flödet.</p>
+      </div>
+      <div class="compare-box right">
+        <h4>🇪🇸 Spanskt Imperium</h4>
+        <p><strong>Typ:</strong> Landimperium</p>
+        <p>Erövrade marken och ursprungsbefolkningen. Silvergruvor, plantager, slavar. Steg 1: "Ambulerande plundringsfest" (ö till ö). Steg 2: Erövring av stora civilisationer.</p>
+      </div>
+    </div>
+ 
+    <h3>Ny Geografisk Världsbild</h3>
+    <p>På ca 40 år (1480–1522) förändras kartan totalt. Den nya världen avbildas. Man inser att:</p>
+    <ul>
+      <li>Jorden är <strong>rund</strong> (sjömän har länge vetat det — horisonten ser rundad ut)</li>
+      <li>Det finns en <strong>fjärde kontinent</strong> — Amerika</li>
+      <li>Världen är <strong>mycket större</strong> än man trott (Stilla Havet)</li>
+      <li>Det finns ett <strong>alternativt väderstreck</strong> — man kan ta sig västerut till Asien</li>
+    </ul>
+  </div>
+</div>
+ 
+<!-- ========== IDÉER & VETENSKAP ========== -->
+<div id="ideer" class="tab-content">
+  <div class="section">
+    <h2>🔭 Vetenskaplig Revolution & Reformationen</h2>
+ 
+    <h3>Den Medeltida Världsbilden — Vad Man Trodde</h3>
+    <p>Den medeltida världsbilden var inte bara astronomisk — den var <strong>moralisk och teologisk</strong>. Aristoteles och Ptolemaios hade hävdat att jorden stod still i universums centrum, och denna uppfattning hade gjorts till officiell kristen lära av Thomas av Aquino (1200-tal) och Augustinus (300-tal).</p>
+    <table>
+      <tr><th>Bibeln säger</th><th>Världsbildens konsekvens</th></tr>
+      <tr><td>Gud är treenig</td><td>→ Tre världsdelar (Europa, Asien, Afrika)</td></tr>
+      <tr><td>Fyra evangelier</td><td>→ Fyra årstider</td></tr>
+      <tr><td>Sju kardinaldygder + dödssynder</td><td>→ Sju stjärnor i Karlavagnen</td></tr>
+      <tr><td>Tolv apostlar</td><td>→ Tolv månader</td></tr>
+      <tr><td>Jord skapades dag 1, solen dag 4</td><td>→ Solen KAN INTE vara i centrum (skapades efter!)  </td></tr>
+      <tr><td>Innerst i jordklotet = helvetet</td><td>→ Geocentrisk världsbild = moralisk ordning</td></tr>
+    </table>
+ 
+    <div class="callout danger">⚠️ KÄRNPUNKT: Att ifrågasätta den geocentriska världsbilden var inte bara fel astronomi — det var kätteri mot hela det kristna samhällssystemet. Kyrkan, ståndssamhället och Guds auktoritet hängde ihop.</div>
+ 
+    <h3>Vetenskapsmännen och Kyrkans "Skill Issues"</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1543</div>
+        <div class="tl-title">Nikolaus Copernicus (Polen) — Den Försiktiga Revolutionären</div>
+        <div class="tl-text">
+          Observerar stjärnhimlen hela livet. Publicerar "Om himlakropparnas kretslopp" strax före sin död. Lanserar den <strong>heliocentriska världsbilden</strong> (solen i centrum). Boken väcker lite uppmärksamhet till en början — svårtillgänglig, sprids långsamt. <br><br>
+          <strong>Kyrkans svar (1616):</strong> Förbjuder boken — 73 år efter publiceringen! Varför? Om jordens placering är fel, vad mer är fel? En felaktig biblisk byggsten hotar hela teologins auktoritet — korthuset kan falla.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1580-tal</div>
+        <div class="tl-title">Tycho "Guldnäsan" Brahe (Danmark) & Johannes Kepler (Polen/Tjeckien)</div>
+        <div class="tl-text">
+          Båda bekräftar den heliocentriska världsbilden. Keplers uträkningar bevisar att planeterna rör sig i <strong>ellipsformade banor</strong> — inte i de perfekta (gudomliga) cirklarna som Ptolemaios ritat. Perfekta cirklar = gudomligt. Fula ellipser = halvdant skapelsejobb från Guds sida? Kyrkans doktrin svajar ytterligare.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1632</div>
+        <div class="tl-title">Galileo Galilei (Italien) — Dömd av Inkvisitionen</div>
+        <div class="tl-text">
+          Använder förbättrat teleskop — bekräftar Copernicus med egna ögon. Publicerar "Dialogen om de två världssystemen". Har inledningsvis påvens tillåtelse. Inkvisitionen dömer honom för kätteri. Tvingas avsäga sig → lär ha viskat: <em>"Eppure si muove"</em> ("Och ändå rör den sig"). Husarrest resten av livet. <br><br>
+          Extra problem: Solen har <strong>svarta fläckar</strong>, månen har <strong>kratrar och ojämnheter</strong> — Guds skapelse är alltså imperfekt? Kyrkan vägrar acceptera.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1687</div>
+        <div class="tl-title">Isaac Newton (England) — Gravitationen</div>
+        <div class="tl-text">
+          Publicerar "Principia" och förklarar tyngdkraften. Newton är djupt troende kristen — inte ute efter att utmana kyrkan. Kyrkan tolkar taktiskt gravitationen som "Guds osynliga omnipotenta kraft" — ett desperatt försök att integrera empirisk naturvetenskap i teologin. Ger tillfällig lättnad, men konflikten är djupare.
+        </div>
+      </div>
+    </div>
+ 
+    <div class="callout info">💡 VIKTIG POÄNG: Ingen av dessa vetenskapsmän ville bekämpa kyrkan. De ville förstå Guds skapelse. Konflikten var oavsiktlig — men oundviklig. Varje ny vetenskaplig kugge tog bort en bit av det religiösa förklaringsmonopolet.</div>
+ 
+    <h3>Empirisk Kunskap — Det Nya Kunskapsidealet</h3>
+    <p>Renässansen hämtade fram det antika kunskapsidealet: <strong>empirisk kunskap</strong> = kunskap baserad på EGNA erfarenheter och observationer. De sex metoderna:</p>
+    <ol>
+      <li>Deltagande observation</li>
+      <li>Laborationer</li>
+      <li>Debatt och idéutbyte</li>
+      <li>Dissektioner</li>
+      <li>Matematiska uträkningar</li>
+      <li>Jämförande analys</li>
+    </ol>
+ 
+    <h3>Reformationen (1517–)</h3>
+    <p><strong>Definition:</strong> Den process som ledde till att den katolska kyrkan splittrades och den protestantiska kyrkan knoppades av. Ordet "reformation" (lat. <em>reformatio</em>) = "förnya/förändra".</p>
+    <h4>Händelserna</h4>
+    <ul>
+      <li>Martin Luther spikade sina 95 teser 1517 — protest mot <strong>avlatsbrev</strong></li>
+      <li>Luther <strong>översatte Bibeln</strong> till tyska (1534) — alla kunde nu läsa!</li>
+      <li>Sverige: Vasabibeln 1541</li>
+    </ul>
+    <h4>Jämförelse: Katolicism vs Lutheranism vs Kalvinism</h4>
+    <table>
+      <tr><th>Fråga</th><th>Katolicism</th><th>Lutheranism</th><th>Kalvinism</th></tr>
+      <tr><td>Vägen till frälsning</td><td>Tro + goda gärningar</td><td>Tro ENBART</td><td>Förutbestämelse</td></tr>
+      <tr><td>Religiös auktoritet</td><td>Bibeln + kyrkans läror</td><td>Bibeln ENBART</td><td>Bibeln enbart</td></tr>
+      <tr><td>"Kyrkan" = ?</td><td>Prästerskapet</td><td>Alla troende</td><td>Troende + råd</td></tr>
+      <tr><td>Bästa levnadssättet</td><td>Klosterlivet</td><td>Alla yrken lika bra</td><td>Enkelt liv, arbete</td></tr>
+      <tr><td>Politisk makt</td><td>Kyrkan styr kungen</td><td>Statskyrka under kungen</td><td>Fristående kyrka, kyrkoråd</td></tr>
+      <tr><td>Utsmyckning</td><td>Mycket utsmyckat</td><td>Enklare</td><td>Mycket enkelt, distanserar sig från lyx</td></tr>
+    </table>
+ 
+    <h3>30-åriga Kriget (1618–1648) & Westfaliska Freden</h3>
+    <p><strong>Start:</strong> Defenestreringen i Prag 1618 — kalvinister kastar kejserliga sändebud ut ur ett fönster i Prag. Utlöser krig mellan protestanter och katoliker.</p>
+    <p><strong>Gustav II Adolf</strong> ser det som ett gudomligt kall. Lämnar Sverige. Dör i Lützen 1632. Sverige bekräftar sin stormaktsstatus.</p>
+    <p><strong>Westfaliska freden 1648:</strong></p>
+    <ul>
+      <li>Tyska riket försvagas (Schweiz + Nederländerna självständiga)</li>
+      <li>Frankrike ny stormakt</li>
+      <li>Sverige bekräftat som stormakt (men Gustaf II Adolf dead)</li>
+      <li>Drottning Kristina mottar Silverbibeln, abdikerar sedan och konverterar till katolicism</li>
+    </ul>
+  </div>
+</div>
+ 
+<!-- ========== FILOSOFERNA ========== -->
+<div id="filosofer" class="tab-content">
+  <div class="section">
+    <h2>📜 Upplysningsfilosoferna — Djupgenomgång</h2>
+    <div class="callout danger">⚠️ PROVTIPS: Provet frågar om jämförelser! Ha Rousseau vs Voltaire, Hobbes vs Locke, och More vs Hobbes klara i huvudet!</div>
+ 
+    <h3>Snabb Jämförelsetabell</h3>
+    <table>
+      <tr><th>Filosof</th><th>Statsskick</th><th>Äganderätt</th><th>Syn på folket</th><th>Kyrka</th><th>Nyckelbegrepp</th><th>Påverkar</th></tr>
+      <tr><td><strong>More</strong> (1478–1535)</td><td>Gemensamt styre, 6h arbete, roterande yrken</td><td>NEJ — gemensamt</td><td>Positiv</td><td>Tolererar alla utom ateism</td><td>Utopia, gemensamt ägande</td><td>Socialismen, Marx</td></tr>
+      <tr><td><strong>Hobbes</strong> (1588–1679)</td><td>Envåldshärskare, Leviathan</td><td>Ja — staten skyddar</td><td>Pessimistisk — egoistisk</td><td>Staten styr kyrkan</td><td>Leviathan, bellum omnium</td><td>Auktoritarism</td></tr>
+      <tr><td><strong>Locke</strong> (1632–1704)</td><td>Parlament + kung samstyr</td><td>JA — okränkbar</td><td>Rationell, formas av erfarenhet</td><td>Religionsfrihet</td><td>Tabula rasa, revolutionsrätt</td><td>USA:s konstitution, liberalism</td></tr>
+      <tr><td><strong>Rousseau</strong> (1712–1778)</td><td>Direktdemokrati, allmänvilja</td><td>NEJ — korrumperar</td><td>Föds god, korrumperas av samhället</td><td>Civil kyrka, stark kritik</td><td>Allmänvilja, naturrätt</td><td>Franska revolutionen, demokrati</td></tr>
+      <tr><td><strong>Voltaire</strong> (1694–1778)</td><td>Upplyst despot, en kung</td><td>Ja — individens frihet</td><td>Pessimistisk — "pöbeln"</td><td>EXTREM kritik: "krossa den skändlige"</td><td>Upplyst despot, Écrasez l'infâme</td><td>Fredrik den store, Preussen</td></tr>
+      <tr><td><strong>Montesquieu</strong> (1689–1755)</td><td>Maktdelning i 3 grenar</td><td>Ja — skyddas av inst.</td><td>Neutral — institutioner viktigast</td><td>Måttlig, religionsfrihet</td><td>Checks and balances, maktdelning</td><td>USA:s konstitution</td></tr>
+      <tr><td><strong>Paine</strong> (1737–1809)</td><td>Republik, mot monarki</td><td>Ja — men grundinkomst till fattiga</td><td>Optimistisk — förnuft hos alla</td><td>Deist, inte ateist</td><td>Common sense, mänskliga rättigheter</td><td>Båda revolutionerna</td></tr>
+    </table>
+ 
+    <h3>Detaljkort — Varje Filosof</h3>
+    <div class="phil-grid">
+      <div class="phil-card more">
+        <span class="tag tag-soc">Socialist-förfader</span>
+        <h3>Thomas More (1478–1535)</h3>
+        <p><strong>Bok:</strong> Utopia (1516)</p>
+        <p><strong>Problem:</strong> Privatägandet av mark = roten till alla sociala orättvisor. Rika ägare ackumulerar på de fattigas bekostnad.</p>
+        <p><strong>Lösning:</strong></p>
+        <ul>
+          <li>Gemensamt ägande av mark</li>
+          <li>6h arbetsdag (roterande yrken vartannat år)</li>
+          <li>6h studier · 6h sömn · 6h kärlek/umgänge</li>
+          <li>Jämlikhet i materiell standard</li>
+          <li>Religionsfrihet (men EJ ateism)</li>
+          <li>Könen i stort sett jämställda — NYTT för 1500-tal</li>
+        </ul>
+        <p><em>"Utopia"</em> = gr. ou-topos (ingenstans) + eu-topos (god plats) = en dröm som ännu inte existerar.</p>
+        <p><strong>Historiebruk:</strong> Socialism, Marx, franska revolutionens jordkrav. Henrik VIII uppfattade det som ett skämt — för extremt.</p>
+        <p><strong>Slut:</strong> Avrättas 1535 för att vägra erkänna Henrik VIII som kyrkans överhuvud.</p>
+      </div>
+ 
+      <div class="phil-card hobbes">
+        <span class="tag tag-des">Envälde</span>
+        <h3>Thomas Hobbes (1588–1679)</h3>
+        <p><strong>Bok:</strong> Leviathan (1651)</p>
+        <p><strong>Naturtillstånd:</strong> Bellum omnium contra omnes — "allas krig mot alla". Livet utan stat är "ensamt, fattigt, otäckt, djuriskt och kort".</p>
+        <p><strong>Lösning:</strong> Socialt kontrakt. Medborgarna överlåter ALL makt till en envåldshärskare (Leviathan) i utbyte mot skydd och ordning. Kontraktet är asymmetriskt och oåterkalleligt.</p>
+        <p><strong>Konsekvens:</strong> INGEN rätt till revolution (= kastar sig tillbaka till naturtillståndet).</p>
+        <p><strong>Historiebruk:</strong> Auktoritära regimer. Moderna nazister och högerextremister hänvisar till Hobbes-logik.</p>
+      </div>
+ 
+      <div class="phil-card locke">
+        <span class="tag tag-lib">Liberalism</span>
+        <h3>John Locke (1632–1704)</h3>
+        <p><strong>Böcker:</strong> An Essay Concerning Human Understanding (1689) + Two Treatises of Government (1689)</p>
+        <p><strong>Kunskapssyn:</strong> Tabula rasa — vi föds som tomma blad. INGEN medfödd kunskap. All kunskap kommer av empirisk erfarenhet (sinnesintryck). Om det fanns medfödd kunskap borde alla vara eniga om något — men det är de inte. Locke → Empiri → Upplysningens grund.</p>
+        <p><strong>Politisk lösning:</strong> Parlament + kung samstyr. Individens tre okränkbara rättigheter: <strong>liv, frihet, egendom</strong>. (Jefferson ändrar till "liv, frihet, strävan efter lycka" i USA:s Självständighetsförklaring.)</p>
+        <p><strong>Revolutionsrätt:</strong> Om kontraktet bryts — om styresmakten kränker individens rättigheter — har medborgarna RÄTT och PLIKT att göra revolution.</p>
+        <p><strong>Varför liberal och inte socialist?</strong> Locke kräver privat äganderätt som okränkbar. En socialist vill omfördela eller avskaffa privat ägande. Locke skyddar det.</p>
+        <p><strong>Historiebruk:</strong> USA:s konstitution. Frihetstiden i Sverige. Liberalismen.</p>
+      </div>
+ 
+      <div class="phil-card rousseau">
+        <span class="tag tag-dem">Direktdemokrati</span>
+        <h3>Jean-Jacques Rousseau (1712–1778)</h3>
+        <p><strong>Böcker:</strong> Om samhällsfördraget (1762) + Émile, eller om uppfostran (1762)</p>
+        <p><strong>Grundtes:</strong> Människan föds god men korrumperas av samhällets institutioner. Privatägandet förstör allt — den dag någon satte upp ett staket och sa "detta är mitt" uppstod orättvisans källa.</p>
+        <p><strong>"Människan är född fri, och överallt är hon i bojor."</strong></p>
+        <p><strong>Lösning:</strong> Allmänviljan (volonté générale) — folkets samlade genuina vilja för det gemensamma bästa. Direktdemokrati. Staten administrerar bara folkets vilja. Livegenskap, slaveri och ståndssamhälle MÅSTE bort.</p>
+        <p><strong>Naturrätt:</strong> Alla människor föds med naturliga rättigheter — jämlikhet är original-tillståndet (jägare-samlare-samhälle, inga hierarkier).</p>
+        <p><strong>Pedagogik (Émile):</strong> Barn ska lära sig genom att prova själva — inte memorera och lyda. Civil kyrka baserad på förnuft och erfarenhet, inte dogm.</p>
+        <p><strong>Paradox:</strong> Kräver total jämlikhet — men exkluderar konsekvent KVINNOR. "De passar bättre i hemmet."</p>
+        <p><strong>Mot Voltaire:</strong> Voltaires "upplysta despot" = "falsk upplysning" — det är som att "fästa girlanger av blommor längs de kedjor av järn som fängslar människorna".</p>
+        <p><strong>Historiebruk:</strong> Franska revolutionen (direktlänk). Modern demokratiteori. Émile-pedagogiken lever kvar.</p>
+      </div>
+ 
+      <div class="phil-card voltaire">
+        <span class="tag tag-des">Upplyst Despot</span>
+        <h3>Voltaire (1694–1778)</h3>
+        <p><strong>Egentliga namnet:</strong> François-Marie Arouet</p>
+        <p><strong>Bok:</strong> Candide (1759)</p>
+        <p><strong>Kyrkakritik:</strong> EXTREM. Slagord: <em>Écrasez l'infâme!</em> ("Krossa den skändlige!") — syftar på kyrkan. Barn ska inte uppfostras i religionens anda. Prästernas privilegier ska bort. Inkvisitionen är civilisationens skam.</p>
+        <p><strong>La Mettrie</strong> backar Voltaire och tar det längst: förnekar Guds existens i "Människan maskinen" (1746) — FÖRSTA gången ateismen får ett språkrör.</p>
+        <p><strong>Politisk lösning:</strong> UPPLYST DESPOT — en kung med tillräcklig intelligens och bildning att genomföra nödvändiga reformer UTAN att konsultera folket. "En upplyst despot hellre än en oupplyst demokrati."</p>
+        <p><strong>Syn på folket:</strong> Pessimistisk. "Pöbeln" är oupplyst och oansvarigt.</p>
+        <p><strong>Mot Rousseau:</strong> Folket ska inte styra — de förstår inte vad de behöver.</p>
+        <p><strong>Exil:</strong> Går i landsflykt till Schweiz. Fredric den Store i Preussen ger fristad.</p>
+        <p><strong>Historiebruk:</strong> Reformabsolutism. Fredrik den store, Katarina den stora = "upplysta despoter".</p>
+      </div>
+ 
+      <div class="phil-card montesquieu">
+        <span class="tag tag-lib">Maktdelning</span>
+        <h3>Montesquieu (1689–1755)</h3>
+        <p><strong>Bok:</strong> Lagarnas anda (1748)</p>
+        <p><strong>Grundtes:</strong> Frihet är INTE ett naturligt tillstånd — det är ett institutionellt resultat. Det skapas och skyddas av strukturer, inte av individers goda vilja.</p>
+        <p><strong>Maktdelning i 3 grenar:</strong></p>
+        <ol>
+          <li>Lagstiftande (parlament/riksdag)</li>
+          <li>Verkställande (kung/regering/president)</li>
+          <li>Dömande (domstolar)</li>
+        </ol>
+        <p><strong>Checks and balances:</strong> Varje gren kontrollerar de andra. Ingen enskild person eller institution kan bli allsmäktig — oavsett hur goda intentioner. Systemet > individen.</p>
+        <p><strong>Mot Voltaire:</strong> Upplyst despot kan dö, bli galen eller korrumperas. Behövs institutioner.</p>
+        <p><strong>Mot Rousseau:</strong> Direktdemokrati kan trampa på minoriteters rättigheter. Majoritetens vilja ≠ alltid rätt.</p>
+        <p><strong>Ursprungligt syfte:</strong> Skydda adelns makt mot kungligt envälde — men slutsatserna transcenderar detta till något universellt.</p>
+        <p><strong>Historiebruk:</strong> USA:s konstitution (kongressen, presidenten, Högsta domstolen). James Madison citerar Montesquieu direkt i The Federalist Papers.</p>
+      </div>
+ 
+      <div class="phil-card paine">
+        <span class="tag tag-rep">Republik</span>
+        <h3>Thomas Paine (1737–1809)</h3>
+        <p><strong>Böcker:</strong> Common Sense (1776) + Rights of Man (1791–92) + Age of Reason</p>
+        <p><strong>Bakgrund:</strong> Korsettmakare från Norfolk — inte aristokrat. Emigrerar till Amerika 1774. Folkets röst.</p>
+        <p><strong>Common Sense:</strong> Säljer 100 000 exemplar på 3 månader i ett Amerika med 2,5 miljoner invånare. Budskap: Det är löjligt att en liten ö på andra sidan Atlanten ska styra en hel kontinent. Ärftlig monarki = irrationellt — varför ge makt till den som råkar ha rätt far?</p>
+        <p><strong>Grundidéer:</strong> Alla individer har odiskutabla rättigheter: yttrandefrihet, religionsfrihet, rätten till rättegång, rätten att välja sin regering. Varje generation har rätt att forma sina egna institutioner.</p>
+        <p><strong>Socialpolitik:</strong> Förespråkar grundinkomst för fattiga — finansierad av skatt på jordägande. Föregripar moderna socialliberala idéer.</p>
+        <p><strong>Turbulent liv:</strong> Dömd in absentia i England. Väljs till franska nationalförsamlingen. Fängslas av jakobinerna. Räddas precis från guillotinen. Dör fattig och glömd i New York 1809.</p>
+        <p><strong>Historiebruk:</strong> Båda revolutionerna. Mänskliga rättigheterna.</p>
+      </div>
+    </div>
+ 
+    <h3>Djupjämförelser — Kärnfrågor på Provet</h3>
+ 
+    <h4>ROUSSEAU vs VOLTAIRE — Den Stora Splitten</h4>
+    <div class="compare-grid">
+      <div class="compare-box left">
+        <h4>Rousseau — Folket styr</h4>
+        <ul>
+          <li>Alla föds jämlika och fria</li>
+          <li>Allmänviljan = direktdemokrati</li>
+          <li>Staten administrerar folkets vilja</li>
+          <li>Privatägandet är problemet</li>
+          <li>Kyrkan: Civil kyrka baserad på förnuft</li>
+          <li>Franska revolutionen = hans barn</li>
+        </ul>
+      </div>
+      <div class="compare-box right">
+        <h4>Voltaire — Kungen vet bäst</h4>
+        <ul>
+          <li>Folket ("pöbeln") är oupplyst</li>
+          <li>Upplyst despot genomför reformer</li>
+          <li>Individen primär, men folket väljer inte</li>
+          <li>Privat ägande = OK</li>
+          <li>Kyrkan: "Krossa den skändlige!" (hårdast kritik)</li>
+          <li>Fredrik den store = hans förebild</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sticky-note">Rousseau om Voltaire: Hans frihet är "falsk upplysning" — det är som att "fästa girlanger av blommor längs de kedjor av järn som fängslar människorna." Man tar bort kedjornas smärta men inte kedjorna.</div>
+ 
+    <h4>HOBBES vs LOCKE — Kontraktets Natur</h4>
+    <div class="compare-grid">
+      <div class="compare-box left">
+        <h4>Hobbes — Rädsla → Lydnad</h4>
+        <ul>
+          <li>Naturtillstånd = krig, kaos, allas krig mot alla</li>
+          <li>Kontrakt: Medborgaren ÖVERLÅTER all makt</li>
+          <li>Kungen är obegränsat suverän</li>
+          <li>Ingen rätt till revolution (= kaos)</li>
+          <li>Asymmetriskt kontrakt</li>
+        </ul>
+      </div>
+      <div class="compare-box right">
+        <h4>Locke — Frihet → Delegation</h4>
+        <ul>
+          <li>Naturtillstånd = frihet + förnuft (men osäkert)</li>
+          <li>Kontrakt: Medborgaren DELEGERAR makt</li>
+          <li>Kungen har uppdrag att skydda individen</li>
+          <li>Revolution = rätt och PLIKT om kontraktet bryts</li>
+          <li>Tabula rasa → empirism → liberalism</li>
+        </ul>
+      </div>
+    </div>
+ 
+    <h4>MORE vs HOBBES — Samhällets Problem & Lösning</h4>
+    <div class="compare-grid">
+      <div class="compare-box left">
+        <h4>More — Privatägandet är roten</h4>
+        <p>Problem: Privat markägande skapar ojämlikhet och exploatering. Lösning: Gemensamt ägande, 6h arbetsdag, rotation, jämlikhet. Förebådar socialismen.</p>
+      </div>
+      <div class="compare-box right">
+        <h4>Hobbes — Naturen är problemet</h4>
+        <p>Problem: Människans naturliga egoism. Lösning: Stark stat (Leviathan) som tvingar ordning. Äganderätten skyddas, inte avskaffas. Förebådar auktoritarism.</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- ========== REVOLUTIONERNA ========== -->
+<div id="revolutioner" class="tab-content">
+  <div class="section">
+    <h2>🔥 Revolutionerna — Orsaker, Förlopp, Konsekvenser</h2>
+ 
+    <h3>Kontexten: Triangelhandeln</h3>
+    <p>Grunden för koloniernas ekonomi — och en direkt orsak till revolutionernas finansiering och konflikter:</p>
+    <div class="summary-box">
+      <h4>Triangelhandeln — Tre Etapper</h4>
+      <p>1️⃣ <strong>Europa → Afrika:</strong> Billiga europeiska varor (tyger, glaspärlor, vapen, järn) byttes mot slavar vid slavstationer i Östafrika.</p>
+      <p>2️⃣ <strong>Afrika → Amerika (Middle Passage):</strong> Slavar fraktades under fruktansvärda förhållanden. Hög dödlighet. Köptes av plantageägare.</p>
+      <p>3️⃣ <strong>Amerika → Europa:</strong> Tobak, socker (→ rom!), bomull fraktades till Europa. Råvaror bearbetades och såldes dyrt.</p>
+      <p>Merkantilistisk logik: Maximera export, minimera import. Slavar = "gratis" arbetskraft → maximal vinst. Kapital från triangelhandeln finansierar sedan den industriella revolutionen.</p>
+    </div>
+ 
+    <h3>🇺🇸 Amerikanska Revolutionen (1775–1783)</h3>
+    <h4>Orsaker (EPIS-modellen)</h4>
+    <table>
+      <tr><th>EPIS</th><th>Orsak</th><th>Förklaring</th></tr>
+      <tr><td>E</td><td>Sjuårskriget skulder</td><td>England behöver betala kriget mot Frankrike → beskattar kolonierna</td></tr>
+      <tr><td>E</td><td>Stamp Act</td><td>Allt papper måste vara engelskt, betalas i pund (dyrt!)</td></tr>
+      <tr><td>E</td><td>Navigation Act</td><td>All handel måste gå på engelska skepp — kolonisterna kan inte bedriva egen handel</td></tr>
+      <tr><td>E</td><td>Tea Act</td><td>Te (från Kina) får bara köpas av det engelska Ostindiska kompaniet (monopol = dyrt)</td></tr>
+      <tr><td>P</td><td>Ingen representation</td><td>"No taxation without representation!" — Kolonisterna har ingen röst i det brittiska parlamentet</td></tr>
+      <tr><td>I</td><td>Upplysningstankar</td><td>Locke (revolutionsrätt), Montesquieu (maktdelning), Paine (Common Sense)</td></tr>
+      <tr><td>S</td><td>Ny identitet</td><td>Kolonister födda i Amerika = amerikanare, inte engelsmän. Geografiskt och kulturellt avstånd enormt.</td></tr>
+    </table>
+ 
+    <h4>Förlopp</h4>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">1773</div><div class="tl-title">Boston Tea Party</div><div class="tl-text">Kolonister klädda som mohawk-indianer boardar brittiska skepp och kastar hela tételaster i Boston Harbor i protest mot monopolet och Tea Act. Den utlösande gnistan.</div></div>
+      <div class="tl-item"><div class="tl-year">1775</div><div class="tl-title">Militär sammandrabbning</div><div class="tl-text">Lexington och Concord. Kriget är ett faktum.</div></div>
+      <div class="tl-item"><div class="tl-year">4 juli 1776</div><div class="tl-title">Självständighetsförklaringen</div><div class="tl-text">Thomas Jefferson skriver (med tydliga spår av Locke och Paine). "Vi anser dessa sanningar vara självklara: att alla människor är skapade jämlika..." = Locke på engelska.</div></div>
+      <div class="tl-item"><div class="tl-year">1778</div><div class="tl-title">Frankrike allierar sig</div><div class="tl-text">Hämnd för Sjuårskriget. Avgörande militärt och finansiellt stöd. Men Frankrike bankrutteras → trigger för franska revolutionen.</div></div>
+      <div class="tl-item"><div class="tl-year">1783</div><div class="tl-title">Freden i Paris</div><div class="tl-text">England erkänner USA:s självständighet. Världens första moderna demokratiska republik.</div></div>
+      <div class="tl-item"><div class="tl-year">1789</div><div class="tl-title">USA:s konstitution</div><div class="tl-text">Montesquieus maktdelning (kongressen, presidenten, Högsta domstolen). Lockes äganderätt och revolutionsrätt inbyggda.</div></div>
+    </div>
+ 
+    <h4>Konsekvenser</h4>
+    <ul>
+      <li>USA = världens första moderna demokratiska republik</li>
+      <li>Frankrike bankrutt → direkt bidragande orsak till franska revolutionen</li>
+      <li>25 000 dör i kriget</li>
+      <li>Lafayette: deltog i amerikanska revolutionen, återvänder med idéerna till Frankrike (direkt länk)</li>
+      <li>Ursprungsbefolkningen trycks tillbaka vid expansion västerut</li>
+      <li>Bevisar att kolonier kan bryta sig loss — inspirerar framtida antikoloniala rörelser</li>
+    </ul>
+ 
+    <h3>🇫🇷 Franska Revolutionen (1789–1799)</h3>
+    <h4>Samhällets Struktur — Varför Det Exploderar</h4>
+    <div class="summary-box">
+      <h4>Det Franska Ståndssamhället</h4>
+      <p>👑 <strong>Kronan:</strong> Kung Ludvig XVI (sextonde) + Marie Antoinette. Enväldig, lever i Versailles, ingen kontakt med folket.</p>
+      <p>⛪ <strong>1:a ståndet — Prästerna</strong> (~0,5%): Betalar ingen skatt. Stora jordegendomar.</p>
+      <p>🏰 <strong>2:a ståndet — Adeln</strong> (~1,5%): Betalar ingen skatt. Exklusiva privilegier och yrken.</p>
+      <p>👨‍🌾 <strong>3:e ståndet — ALLA ANDRA</strong> (~98%): Bönder, köpmän, advokater, läkare, handelsmän. Betalar ALL skatt. 1 röst per stånd = alltid utröstat 2:1!</p>
+    </div>
+ 
+    <h4>De Åtta Orsakerna</h4>
+    <ol>
+      <li><strong>Orättvis maktfördelning:</strong> 2% styr 98%. En röst per stånd = 2:1 mot tredje ståndet alltid.</li>
+      <li><strong>Höga skatter:</strong> Frälset är skattebefriat. Tredje ståndet bär hela bördan.</li>
+      <li><strong>Nationella skulder:</strong> Sjuårskriget + stödet till den amerikanska revolutionen + hovets lyxliv = statsbankrutt.</li>
+      <li><strong>Missväxt:</strong> Kalla vintrar 1780-tal. Befolkningen kämpade för att överleva och betala skatt.</li>
+      <li><strong>Upplysningsidéer:</strong> Rousseau, Voltaire, Montesquieu — intellektuellt ramverk för förändring.</li>
+      <li><strong>Höjda brödpriser:</strong> Missväxt → brist → prisstegring → svält → desperation. BRÖDET triggar revoltens praktiska dynamik.</li>
+      <li><strong>Ny borgarklass:</strong> Läkare, advokater, tidningsägare — rika men utan politiskt inflytande. Vill ha representation.</li>
+      <li><strong>Hovets lyxliv:</strong> Kungen och Marie Antoinette lever i total verklighetsflykt. Ingen kontakt med folkets lidande.</li>
+    </ol>
+ 
+    <h4>Förlopp</h4>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-year">Maj 1789</div><div class="tl-title">Riksdagen sammankallas</div><div class="tl-text">Första gången på ~175 år. Kungen vill höja skatterna. Tredje ståndet kräver individuell rösträtt (per huvud) istället för per stånd → blockeras av adel + präster 2:1.</div></div>
+      <div class="tl-item"><div class="tl-year">Juni 1789</div><div class="tl-title">Nationalförsamlingen bildas</div><div class="tl-text">Tredje ståndet lämnar riksdagsbyggnaden. Går till tennishallen (bollhallen). Svär att inte skingras förrän Frankrike har en konstitution — "Tennisplanseden". Rousseaus allmänvilja i praktiken!</div></div>
+      <div class="tl-item"><div class="tl-year">14 juli 1789</div><div class="tl-title">Stormningen av Bastiljen 🏰</div><div class="tl-text">Kungen samlar 18 000 soldater utanför Paris. Folket stormar Bastiljen (kungligt fängelse = symbolen för despotism) för krut och vapen. Bastiljdagen = franska nationaldagen idag.</div></div>
+      <div class="tl-item"><div class="tl-year">Juli 1789</div><div class="tl-title">Kvinnotåget till Versailles</div><div class="tl-text">Brödbrist → kvinnor marscherar till Versailles. Tar med sig kungen och familjen till Paris. Kungen i husarrest. Axel von Fersen hjälper kungen att planera flykt — misslyckas.</div></div>
+      <div class="tl-item"><div class="tl-year">1789</div><div class="tl-title">Deklaration om mänskliga rättigheter</div><div class="tl-text">Alla är lika inför lagen. Alla föds fria och jämlika (Rousseau + Lafayette). Feodala privilegier avskaffas.</div></div>
+      <div class="tl-item"><div class="tl-year">21 jan 1793</div><div class="tl-title">Kung Ludvig XVI avrättas</div><div class="tl-text">"Längre leve republiken!" Frankrike blir republik. Marie Antoinette avrättas i oktober 1793.</div></div>
+      <div class="tl-item"><div class="tl-year">1793–1794</div><div class="tl-title">Skräckväldet (Robespierre)</div><div class="tl-text">Maximilien Robespierre och jakobinerna tar makten. 17 000 döms med guillotinen, 20 000–40 000 avrättas utan dom. 61% av de avrättade är från TREDJE ståndet (revolutionen äter sina egna). 27 juli 1794: kupp tar Robespierre — han guillotineras.</div></div>
+      <div class="tl-item"><div class="tl-year">1795–1799</div><div class="tl-title">Direktoratet</div><div class="tl-text">Ångrar många reformer. Ingen rösträtt. Ogillar kvinnors ökade ställning.</div></div>
+      <div class="tl-item"><div class="tl-year">1799</div><div class="tl-title">Napoleon tar makten</div><div class="tl-text">Kupp. Kröner sig till KEJSARE (inte kung — "kung" har dåligt rykte). Revolutionens politiska fas över.</div></div>
+    </div>
+ 
+    <h3>Jämförelse: Amerikanska vs Franska Revolutionen</h3>
+    <table>
+      <tr><th>Dimension</th><th>🇺🇸 Amerikanska</th><th>🇫🇷 Franska</th></tr>
+      <tr><td>Typ</td><td>Frihetskrig för självständighet</td><td>Klassrevolution underifrån</td></tr>
+      <tr><td>Mot vem?</td><td>Engelskt moderland — utländskt förtryck</td><td>Inhemsk överklass: adel, präster, kung</td></tr>
+      <tr><td>Drivkraft</td><td>Välbärgade vita engelskamerikaner</td><td>Urfattiga bönder, proletariat, borgarklass</td></tr>
+      <tr><td>Idéer</td><td>Locke (frihet, egendom) + Montesquieu</td><td>Rousseau (allmänvilja, jämlikhet) + Montesquieu</td></tr>
+      <tr><td>Inkludering</td><td>Bara vita välbärgade MÄN. Ej kvinnor, svarta, indianer. Slaveriet fortsätter.</td><td>I teorin alla medborgare. Men Rousseau exkluderar kvinnor. Slaveriet i kolonierna kvarstår länge.</td></tr>
+      <tr><td>Resultat</td><td>Stabilt konstitutionellt system som lever kvar. Kapitalism + privat egendom bevaras.</td><td>Skräckvälde, kaos, Napoleon. Total omvälvning av ståndssamhälle. Mer radikal men mer instabil.</td></tr>
+      <tr><td>Filosofisk inspirationskälla</td><td>Locke — individens rättigheter och äganderättens helgd</td><td>Rousseau — allmänvilja, naturrätt, jämlikhet</td></tr>
+      <tr><td>Konservativ/radikal?</td><td>Relativt konservativ (tar befintliga rättigheter, ändrar inte samhällets struktur fundamentalt)</td><td>Radikal (angriper hela ståndssamhällets logik)</td></tr>
+    </table>
+ 
+    <div class="callout">💡 Lafayette = den levande länken. Han deltog i amerikanska revolutionen, återvände till Frankrike med idéerna och spelade central roll i Nationalförsamlingens Deklaration om mänskliga rättigheter.</div>
+  </div>
+</div>
+ 
+<!-- ========== INDUSTRIALISERING ========== -->
+<div id="industri" class="tab-content">
+  <div class="section">
+    <h2>⚙️ Den Industriella Revolutionen</h2>
+    <div class="callout info">ℹ️ Det är inte en politisk revolution — det är en revolution i PRODUKTIONSSÄTT som skapar de sociala klasser, ideologier och levnadsbetingelser vi fortfarande lever med.</div>
+ 
+    <h3>KANOT-Modellen — De Fem Orsakerna</h3>
+    <div class="kanot">
+      <div class="kanot-item"><span class="letter">K</span><span class="word">Kapital</span></div>
+      <div class="kanot-item"><span class="letter">A</span><span class="word">Arbetskraft</span></div>
+      <div class="kanot-item"><span class="letter">N</span><span class="word">Natur</span></div>
+      <div class="kanot-item"><span class="letter">O</span><span class="word">Organisation</span></div>
+      <div class="kanot-item"><span class="letter">T</span><span class="word">Teknik</span></div>
+    </div>
+ 
+    <h4>K — Kapital</h4>
+    <p>England hade ackumulerat enorma mängder kapital via <strong>triangelhandeln</strong> och det <strong>Ostindiska kompaniet</strong>. Liberal lagstiftning (Adam Smith, 1776) underlättade investering: privat ägande, fri konkurrens, avskaffat skråsystem. Kapital sökte investeringsmöjligheter — fabrikerna var svaret.</p>
+    <p><strong>Adam Smith — "Kapitalismens fader" (1776):</strong></p>
+    <ul>
+      <li>Fri handel och fri konkurrens</li>
+      <li>"Osynlig hand" = utbud-efterfrågan styr marknaden fritt</li>
+      <li>Staten = monopol/skråväsende = "synlig hand" → ineffektivt</li>
+    </ul>
+ 
+    <h4>A — Arbetskraft</h4>
+    <p>Skiftesreformerna (enclosures): Tusentals småbönders åkerlotter slogs ihop till stora gods. Småbönderna förlorade sin mark, självförsörjning och plats i bygemenskapen → tvingades till städerna → billig reservarmé för fabrikerna. <strong>Konstgjord skapelse av proletariatet.</strong></p>
+    <p>Löner pressas systematiskt: männens löner sänks → anställ kvinnor istället → deras löner sänks → anställ barn. Race to the bottom.</p>
+ 
+    <h4>N — Naturtillgångar</h4>
+    <p>England hade <strong>stenkol</strong> i mängder — driver ångmaskinerna. Saknade bra järn (fosforhaltigt = sämre) — <strong>importerade från Sverige</strong> → Sverige fick kapital till sin egen industrialisering (från 1860-tal). Råvaror från kolonier: bomull, tobak, socker.</p>
+ 
+    <h4>O — Organisation</h4>
+    <p>Skråsystemet (monopol, reglerade priser) ersattes av fria marknader. "Laissez-faire" — staten drar sig tillbaka. Fabrikssystem med specialisering. Kanaler och makadam-vägar för distribution. Manufakturer = mellansteg (arbetar hemma under övervakning → sedan fabriker).</p>
+ 
+    <h4>T — Teknik</h4>
+    <table>
+      <tr><th>Uppfinning</th><th>Uppfinnare</th><th>År</th><th>Effekt</th></tr>
+      <tr><td>Förbättrad ångmaskin</td><td>James Watt</td><td>1769</td><td>Fabriker kan placeras VAR SOM HELST (ej vid vattendrag). Driver gruvpumpar, ånglok, ångbåtar.</td></tr>
+      <tr><td>Spinning Jenny</td><td>James Hargreaves</td><td>1764</td><td>Gör 8 spinnerskors arbete. Textilindustrin transformeras.</td></tr>
+      <tr><td>Flygande skytteln</td><td>John Kay</td><td>1733</td><td>Revolutionerar vävning. Produktiviteten exploderar.</td></tr>
+      <tr><td>Makadam-vägar</td><td>John McAdam</td><td>1800-tal</td><td>Vägar som håller hela året (inte bara sommaren).</td></tr>
+      <tr><td>Ångloket "Rocket"</td><td>George Stephenson</td><td>1829</td><td>38 km/h — "livsfarligt fort". Järnvägar möjliggör nationell marknad.</td></tr>
+    </table>
+ 
+    <div class="sticky-note">Sabotage = från franskans "sabot" (träsko). Missnöjda spinnare kastade träskor in i de nya maskinerna. Ludditer = rörelse som förstörde maskiner som tog deras jobb. Demonstrationer och sabotage vanliga i tidigt 1800-tal.</div>
+ 
+    <h3>Varför England FÖRST?</h3>
+    <p>England hade ALLA fem KANOT-faktorerna simultaneously. Jämförelse:</p>
+    <ul>
+      <li><strong>Frankrike:</strong> Hade kapital och teknik men saknade Englands liberala institutioner.</li>
+      <li><strong>Sverige:</strong> Hade järn men saknade stenkol och kapital → industrialiseras först 1860-90-tal.</li>
+      <li><strong>Spanien:</strong> Silvret urholkade all produktionskapacitet.</li>
+    </ul>
+ 
+    <h3>Sociala Konsekvenser — Den Mörka Sidan</h3>
+    <div class="callout danger">⚠️ PROVFÄLLA: Industrialiseringen var INTE bra för de flesta som levde under dess tidiga fas!</div>
+    <table>
+      <tr><th>Konsekvens</th><th>Detaljer</th></tr>
+      <tr><td>Medellivslängd</td><td>36 år för fabriksarbetare. 69 år för jordbruksarbetare. Skillnaden = strukturellt mord.</td></tr>
+      <tr><td>Arbetsdag</td><td>15–18 timmar i skift. Inga pauser för toaletten. Inga semestrar.</td></tr>
+      <tr><td>Barnarbete</td><td>Barn ned till 6–7 år i gruvorna (smala nog att ta sig in). Lungcancer av utsläpp. Snittålder 25 år. Lag 1844: barn under 9 år får inte arbeta, 9–12 år max 12h/dag.</td></tr>
+      <tr><td>Stadsförhållanden</td><td>Inga VA-system. Trångboddhet. Kolera, tyfus, smittkoppor. Industriutsläpp.</td></tr>
+      <tr><td>Löner</td><td>Systematiskt pressade nedåt. Konkurrens om arbete → ägarna sätter villkoren.</td></tr>
+      <tr><td>Klasskillnader</td><td>Exploderande klyftor: Borgerskap (ägare) vs Proletariat (arbetare utan egendom).</td></tr>
+    </table>
+ 
+    <h3>Ideologiska Konsekvenser — Reaktionerna</h3>
+    <p>Industrialiseringen skapade de sociala klasser som gav upphov till 1800-talets stora ideologier:</p>
+    <div class="phil-grid">
+      <div class="phil-card locke" style="border-top: 4px solid #1a3a6b;">
+        <h3>Klassisk Liberalism (Adam Smith)</h3>
+        <p>Staten ska inte lägga sig i. Den "osynliga handen" sköter fördelningen bäst. Individen och fri konkurrens = grundpelarna. Laissez-faire.</p>
+      </div>
+      <div class="phil-card montesquieu" style="border-top: 4px solid #2d5a6b;">
+        <h3>Socialliberalism</h3>
+        <p>Accepterar marknadslogiken men kräver sociala skyddsåtgärder: minimilöner, maxarbetstid, barnarbetsförbud, fattigvård. Kompromiss.</p>
+      </div>
+      <div class="phil-card more" style="border-top: 4px solid #4a7c59;">
+        <h3>Socialismen (Marx, 1800-talets mitt)</h3>
+        <p>Privatägandet av produktionsmedlen är problemet. Kapitalisterna tar värdet som arbetarna skapar (mervärde). Gemensamt ägande → avskaffa klasser. Direktlänk: More (1516) → Marx (1840-50-tal).</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- ========== SVERIGE ========== -->
+<div id="sverige" class="tab-content">
+  <div class="section">
+    <h2>👑 Maktkampen: Kung vs Adel i Sverige (1600-tal)</h2>
+    <div class="callout danger">⚠️ KÄRNFRÅGA: Vilka METODER använder respektive sida? Vad är EFFEKTERNA? Kunna hela pendeln: adeln tar makt → kungen tar tillbaka.</div>
+ 
+    <h3>Maktens Logik</h3>
+    <p>Makt är sällan statisk. Den rör sig dit där resurser, organisationsförmåga och legitimitet samlas. Under 1600-talet pendlar makten dramatiskt: varje gång kungen är svag (ung, omyndig, bortrest) tar adeln för sig — och varje gång en stark vuxen kung sitter på tronen försöker han vrida tillbaka kontrollen.</p>
+ 
+    <h3>Fas 1 — Adelns Offensiv (1611–1654)</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1611</div>
+        <div class="tl-title">Karl IX dör — Gustav II Adolf (11 år) omyndig</div>
+        <div class="tl-text">
+          Sverige är i krig på tre fronter (Danmark, Polen, Ryssland). Politiskt vakuum. <strong>Axel Oxenstierna</strong> kliver in — en av den svenska historiens skarpaste statsmän, från mäktigaste adelssläkten.<br><br>
+          <strong>Kungaförsäkran:</strong> Innan Gustav kröns tvingas han skriva under ett kontrakt: (a) Viktiga ämbeten ska alltid tillsättas med adliga män. (b) Kungen ska styra TILLSAMMANS med rådet (adelns representanter). Maktskiftet är subtilt men avgörande — kungen är nu bunden av ett skriftligt avtal.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1618</div>
+        <div class="tl-title">Defenestreringen i Prag + 30-åriga kriget</div>
+        <div class="tl-text">
+          Kalvinister i Prag kastar kejserliga sändebud ut ur ett fönster → trettioåriga kriget börjar. Gustav II Adolf ser det som ett religiöst kall att leda protestanterna. Frankrike FINANSIERAR kriget (för att försvaga konkurrande katoliker). Gustav lämnar Sverige.<br><br>
+          Oxenstierna styr Sverige i praktiken som vice-kung. Gustav döper sig till "Lejonet från Norden".
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1634</div>
+        <div class="tl-title">Kollegiesystemet + Ny Grundlag</div>
+        <div class="tl-text">
+          <strong>Kollegiesystemet</strong> (Oxenstiernas genialiska drag): Makten delas upp på specialiserade departement där ADELN har monopol på tjänsterna:<br>
+          • Krigskollegiet (armén) + Amiralskollegiet (flottan)<br>
+          • Kammarkollegiet (skatterna)<br>
+          • Kanslikollegiet (regeringen)<br>
+          • Kommerskollegiet (handel)<br>
+          • Högsta domstolen<br><br>
+          Kungen kan inte längre styra utan kollegierna — adeln är nu EXPERTER på varje maktsfär. Institutionaliserad makt.<br><br>
+          <strong>Ny grundlag 1634:</strong> Adel/kollegier ska samstyra med kungen — konstitutionell rätt.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1632</div>
+        <div class="tl-title">Gustav II Adolf dör vid Lützen (7 november)</div>
+        <div class="tl-text">Skjuten i strid. Hans enda arvinge är dottern Kristina — 6 år gammal. Oxenstierna fortsätter som förmyndare och riksföreståndare. Formellt adelsvälde.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1634–1654</div>
+        <div class="tl-title">Adelns Jorddonationer</div>
+        <div class="tl-text">
+          Adeln kräver "betalning" för krigsdeltagandet. Kronojord (vars skatter gick till staten) delas ut till adeln. Kronan ägde 60% → nu äger adeln 75%+. Staten urholkas ekonomiskt inifrån.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1654</div>
+        <div class="tl-title">Kristina abdikerar</div>
+        <div class="tl-text">
+          Kristina är välutbildad och egensinnig men har ärvt en krona som tömts på reell makt. Grubblar över religion → konverterar till katolicism. Abdikerar, lämnar Sverige för Rom. Föreslår sin kusin som efterträdare: <strong>Karl X Gustav</strong>.
+        </div>
+      </div>
+    </div>
+ 
+    <h3>Fas 2 — Kronans Motoffensiv (1654–1694)</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1654–1660</div>
+        <div class="tl-title">Karl X — "Räfst och Rättarting"</div>
+        <div class="tl-text">
+          Karl X är vuxen, kraftfull och RASANDE. Kronan är utblottad — inte av krig utan av systematisk adelsprivilegier. Oxenstierna är nu död (1654) och adeln saknar sin store arkitekt.<br><br>
+          <strong>Strategi:</strong> Vänder sig direkt till BÖNDERNA. Begär stöd för <em>reduktionen</em> — juridisk process för att återta kronojord. Bönderna (som sett sina skattebördor öka) ger stöd → kungen lovar sänkta skatter.<br><br>
+          <strong>Räfst och Rättarting:</strong> Domstolsliknande process som granskar alla fastighetsöverlåtelser. Ca 10% mark återtas. Karl X dör 1660 — överviktig, för tidigt.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1660–1680-tal</div>
+        <div class="tl-title">Karl XI — Reduktionen Fulländas</div>
+        <div class="tl-text">
+          Fortsätter reduktionen med ännu större systematik. Nya rättegångar, skarpare granskning. Stora delar av adelns mark återgår. Med marken följer skatteintäkterna — staten finansieras igen.<br><br>
+          <strong>Det Geniala Maktdraget — Lågadeln:</strong> Kollegierna kontrolleras fortfarande av gammeladeln som är lojal mot sin klass. Karl XI löser detta: Han "uppfinner" en ny lågadel — dubar ett stort antal nya adelsmän som är <em>lojala mot HONOM personligen</em> (de skyller kungen sin ställning). Gradvis ersätter dessa den gamla adeln i kollegierna.<br><br>
+          Institutionerna är nu KRONANS, inte adelns.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1694</div>
+        <div class="tl-title">Ny Grundlag — Absolut Envälde</div>
+        <div class="tl-text">
+          Regeringsformen omskrivs. Nu gäller: Bara Gud är över kungen. Under Gud är kungen ensam suverän. Adeln är formellt frånkopplad från makten.<br><br>
+          Ett sekel av adelsvälde avslutas med ett pennstreck. Enväldet är ett faktum — precis det Voltaire förespråkade.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1697–1718</div>
+        <div class="tl-title">Karl XII — Envälde och Krig</div>
+        <div class="tl-text">
+          Kröner sig själv vid 15. Drar till krig mot Ryssland. Tidiga framgångar. Katastrof i Poltava. Flyr till Moldavien/osmanska riket i 7 år. Återvänder, angriper Norge. Dör i belägring 1718. Utplånar nästan hela Sveriges manliga befolkning. Sverige bankrutt. Stormaktstiden över.
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1718–</div>
+        <div class="tl-title">Frihetstiden + Gustav III</div>
+        <div class="tl-text">
+          Enväldet upphör. Adeln splittras i Mössor och Hattar. Kungen (Adolf Fredrik) är i praktiken en stämpel. Gustav III tar sedan över, genomför envälde igen (inspirerad av Voltaires upplyste despot), och skjuts på Operan i Stockholm 1792.
+        </div>
+      </div>
+    </div>
+ 
+    <h3>Sammanfattning: Metoder och Effekter</h3>
+    <table>
+      <tr><th>Aktör</th><th>Metoder</th><th>Effekter</th></tr>
+      <tr><td><strong>Adeln (offensiv)</strong></td><td>• Kungaförsäkran (juridiskt kontrakt)<br>• Kollegiesystemet (byråkratisk institution)<br>• Jorddonationer (ekonomisk urholkning)<br>• Ny grundlag 1634 (konstitutionell rätt)</td><td>• Kungen bunden av kontrakt<br>• Makten institutionaliserad i adelns händer<br>• Kronan ekonomiskt svag<br>• Statsinkomster till adeln</td></tr>
+      <tr><td><strong>Kungen (motoffensiv)</strong></td><td>• Mobiliserar bönderna (folklig legitimitet)<br>• Räfst och Rättarting (juridisk process)<br>• Reduktionen (återtar mark)<br>• Skapar lågadel (lojalitetsbyte i kollegier)<br>• Ny grundlag 1694 (konstitutionell rätt)</td><td>• Mark och skatteintäkter återtas<br>• Kollegier nu lojala mot kungen<br>• Absolut envälde 1694<br>• Moderna kollegier = tidig förvaltningsbyråkrati</td></tr>
+    </table>
+ 
+    <div class="callout">💡 ANALYSPOÄNG: Adelns framgångar berodde inte på att de var smartare utan på att de INSTITUTIONALISERADE sin makt. Kronans seger berodde på samma insikt — men i omvänd riktning. Båda sidorna förstod att institutioner > individuell vilja.</div>
+  </div>
+</div>
+ 
+<!-- ========== DANTES HELVETE ========== -->
+<div id="dante" class="tab-content">
+  <div class="section">
+    <h2>🔥 Dantes Helvete — Alla 9 Kretsar</h2>
+    <div class="callout danger">⚠️ UTSLAGSFRÅGA: Kunna rita i DETALJ alla nio kretsar. Lär dig: nummer, namn, synd, straff, och om möjligt exempel på vem som är där.</div>
+ 
+    <p>Dantes <em>Inferno</em> (ca 1308–1321) är del ett av <em>Den Gudomliga Komedin</em>. Dante (med Vergilius som guide) reser nedåt genom helvetets nio kretsar — en trattformad håla som börjar vid Jerusal och smalnar av mot jordens mitt. Ju längre ned, desto grövre synd och strängare straff.</p>
+ 
+    <div class="callout info">🗺️ STRUKTUR: Helvetet är en kona. Ovanför = Porten (lasciate ogni speranza = "Överge allt hopp"). Ytterst = mildaste synder (inkontinens). Innerst = värsta synden (förräderi mot välgörare = Judas).</div>
+ 
+    <div class="hell-container">
+      <div class="hell-circle c1">
+        <div class="circle-num">I</div>
+        <div class="circle-info">
+          <h4>Limbo (Limbus)</h4>
+          <p><strong>Synd:</strong> Inte döpt, ej syndare — men aldrig fick möjlighet att tro (hedniska dygdiga, barn)</p>
+          <p><strong>Straff:</strong> Inget fysiskt plåga — men evig längtan utan hopp om frälsning. Lever i ett trevligt slott i mörker.</p>
+          <p><strong>Invånare:</strong> Homer, Aristoteles, Platon, Sokrates, Aeneas, Saladin. Vergilius själv bor här.</p>
+          <p><strong>Rita:</strong> Yttersta kretsen. Relativt lugnt. Slott i ett mörkt hav.</p>
+        </div>
+      </div>
+ 
+      <div class="hell-circle c2">
+        <div class="circle-num">II</div>
+        <div class="circle-info">
+          <h4>Lusta (Lussuria)</h4>
+          <p><strong>Synd:</strong> Synderna mot köttet — lust, begär, okyskhet. Låtit sinnliga begär överskugga förnuftet.</p>
+          <p><strong>Straff:</strong> Evig storm. Vindpiskade runt i ett svart vinddrag utan vila — som stormarna de veknade för.</p>
+          <p><strong>Invånare:</strong> Kleopatra, Helena av Troja, Dido, Paris, Francesca da Rimini och Paolo (Dantes samtida kärlekstragedi).</p>
+          <p><strong>Rita:</strong> Stormmoln, figurer som virvlar i vinden.</p>
+        </div>
+      </div>
+ 
+      <div class="hell-circle c3">
+        <div class="circle-num">III</div>
+        <div class="circle-info">
+          <h4>Frosseri (Gola)</h4>
+          <p><strong>Synd:</strong> Frosseri, omåttlighet — låtit begär efter mat och dryck styra.</p>
+          <p><strong>Straff:</strong> Liggande i smuttig regn av hagel, snö och smutsigt vatten. Vaktas av Cerberus (trefaldig hund).</p>
+          <p><strong>Invånare:</strong> De frossande. Ciacco (florentinsk man som Dante kände).</p>
+          <p><strong>Rita:</strong> Lervälling och regn. Cerberus med tre huvuden.</p>
+        </div>
+      </div>
+ 
+      <div class="hell-circle c4">
+        <div class="circle-num">IV</div>
+        <div class="circle-info">
+          <h4>Girighet (Avarizia) och Slöseri (Prodigalità)</h4>
+          <p><strong>Synd:</strong> Extrem girighet (samlade för mycket) ELLER extrem slösaktighet (slösade bort allt). Båda synder mot rätt användning av jordiska ting.</p>
+          <p><strong>Straff:</strong> Delas i två grupper som rullar enorma stenar mot varandra i en cirkel, möts, slåss, vänder om — för evigt. Vaktas av Plutus.</p>
+          <p><strong>Invånare:</strong> Präster, kardinaler, munkar (många kyrkliga = giriga). Slösare.</p>
+          <p><strong>Rita:</strong> Två grupper med stenar som krockar i ett O.</p>
+        </div>
+      </div>
+ 
+      <div class="hell-circle c5">
+        <div class="circle-num">V</div>
+        <div class="circle-info">
+          <h4>Vrede och Slöhet (Ira / Accidia)</h4>
+          <p><strong>Synd:</strong> De vreda (aggressiva) och de slöa (passivt sorgsna, kvävde sin ande).</p>
+          <p><strong>Straff:</strong> De vreda slåss och sliter i varandra på ytan av floden Styx. De slöa sjunker under vattnet och bubblar klaganden upp — för evigt.</p>
+          <p><strong>Invånare:</strong> De vreda kamperar på Styx' yta. De slöa bubblar under.</p>
+          <p><strong>Rita:</strong> Mörk flod (Styx). Folk som slåss på ytan. Bubblor under.</p>
+        </div>
+      </div>
+ 
+      <div class="hell-circle c6">
+        <div class="circle-num">VI</div>
+        <div class="circle-info">
+          <h4>Kätteri (Eresia)</h4>
+          <p><strong>Synd:</strong> Förnekande av den odödliga själen, fel religiösa läror, kätteri mot kyrkan.</p>
+          <p><strong>Straff:</strong> Begravda levande i brinnande gravar (sarkofager) av järn. När domens dag kommer stängs locken för evigt.</p>
+          <p><strong>Invånare:</strong> Epikureerna (trodde ej på odödligheten), katarerna, politiska fiender till kyrkan. Farinata degli Uberti (florentinsk adelsman).</p>
+          <p><strong>Rita:</strong> Kyrkogård med öppna, brinnande gravar/sarkofager.</p>
+        </div>
+      </div>
+ 
+      <div class="hell-circle c7">
+        <div class="circle-num">VII</div>
+        <div class="circle-info">
+          <h4>Våld (Violenza) — Tre Ringar</h4>
+          <p><strong>Synd:</strong> Delad i tre: (1) Mot grannen — mördare, rånare, krigsherrar. (2) Mot sig själv — självmördare, slösare med egendomen. (3) Mot Gud/naturen — hädare, sodomiter, ocker.</p>
+          <p><strong>Straff 1 (mot grannen):</strong> Kokar i en flod av blod (Phlegethon). Kentaurer bevakar med pilar — ju grövre brott, desto djupare ned i blodet.</p>
+          <p><strong>Straff 2 (mot sig själv):</strong> Omvandlade till träd och buskar. Harpyor hackar på dem — varje blad som faller orsakar smärta och blod.</p>
+          <p><strong>Straff 3 (mot Gud):</strong> Liggande/sittande/gående på en brinnande öken med eld som faller som regn uppifrån.</p>
+          <p><strong>Invånare:</strong> Alexander den store (ring 1), självmördarna (ring 2), Brunetto Latini (Dantes lärare — i ring 3), ocker.</p>
+          <p><strong>Rita:</strong> Tre koncentriska ringar: blodig flod → skog → brinnande öken.</p>
+        </div>
+      </div>
+ 
+      <div class="hell-circle c8">
+        <div class="circle-num">VIII</div>
+        <div class="circle-info" style="color: #cc8855;">
+          <h4 style="color: #ffaa44;">Bedrägeri (Frode) — Malebolge (De 10 Bolgerna)</h4>
+          <p>En stor trattformad klippformation med 10 vallgravar (bolge). Varje bolgia = en typ av bedrägeri.</p>
+          <ul class="bolge-list" style="font-size:0.88rem; margin-top:0.5rem;">
+            <li><strong>Bolgia 1:</strong> Kopplare och förförare — piskas av demoner</li>
+            <li><strong>Bolgia 2:</strong> Smickrare — nedsänkta i avföring</li>
+            <li><strong>Bolgia 3:</strong> Simoni (sålde kyrkliga ämbeten) — stuckna med huvudet ned i hål, fötterna brinner</li>
+            <li><strong>Bolgia 4:</strong> Spåmän och trollkarlar — huvuden vridna bakåt (kan ej se framåt)</li>
+            <li><strong>Bolgia 5:</strong> Muttagare/ämbetsmissbrukare — nedsänkta i kokande tjära, taggade demoner</li>
+            <li><strong>Bolgia 6:</strong> Hycklare — går i förgyllda blycloak (tungt som bly)</li>
+            <li><strong>Bolgia 7:</strong> Tjuvar — bitna av ormar, omvandlas till orm och tillbaka</li>
+            <li><strong>Bolgia 8:</strong> Svikfulla rådgivare — inlindade i brinnande lågor</li>
+            <li><strong>Bolgia 9:</strong> Skaparare av split (schismatici) — hugga med svärd, sår läks men hugges igen</li>
+            <li><strong>Bolgia 10:</strong> Bedragare, förfalskare, alkemister — sjukdomar, pest, vansinne</li>
+          </ul>
+          <p>Invånare: Ulysses (bolgia 8), Mohammed (bolgia 9 — skismatisk), Jason.</p>
+        </div>
+      </div>
+ 
+      <div class="hell-circle c9">
+        <div class="circle-num">IX</div>
+        <div class="circle-info">
+          <h4 style="color:#66aaff;">Förräderi (Tradimento) — Cocytus</h4>
+          <p style="color:#4488cc;">Den innersta kretsen. En frusen sjö av is (Cocytus). Delad i 4 zoner baserade på vem man förrådde.</p>
+          <ul style="color:#4488cc; font-size:0.88rem; margin-top:0.5rem;">
+            <li><strong>Caina:</strong> Förrädare mot familj — inbäddade i is upp till ansiktet, huvud nedböjt av skam. (Kain)</li>
+            <li><strong>Antenora:</strong> Förrädare mot fosterland/politiska partiet — huvuden ovan is, utsatta för kyla. (Antenor, trojansk prins)</li>
+            <li><strong>Ptolomaea:</strong> Förrädare mot gäster — liggande på rygg i isen, tårar fryser till is på kinderna. (Ptolemaios som bjöd på middag och mördade)</li>
+            <li><strong>Judecca:</strong> Förrädare mot välgörare — HELT inbäddade i isen, i alla möjliga poser. (Judas, Brutus, Cassius)</li>
+          </ul>
+          <p style="color:#4488cc;">I mitten av Judecca sitter <strong>Lucifer/Satan</strong> — fastfrusen i isen till midjan. Tre ansikten (parodierar treenigheten). Tre munnar: tuggar Judas, Brutus och Cassius för evigt.</p>
+          <p style="color:#4488cc;">Dante och Vergilius klättrar ned längs Lucifers kropp och ut på andra sidan — Skärselden.</p>
+        </div>
+      </div>
+    </div>
+ 
+    <h3>Rita-guide: Dantes Helvete</h3>
+    <div class="callout">📝 Rita en trattformad spiral med 9 lager. Ytterst/bredast = Limbo. Innerst/smalast = Förräderi med Lucifer. Märk varje lager med nummer och synd. Lucifer = mitten av botten. Pilar visar riktning nedåt.</div>
+ 
+    <table>
+      <tr><th>#</th><th>Namn</th><th>Synd</th><th>Straff</th></tr>
+      <tr><td>I</td><td>Limbo</td><td>Odöpta, hedniska dygdiga</td><td>Evig längtan, inget hopp</td></tr>
+      <tr><td>II</td><td>Lusta</td><td>Köttsliga begär</td><td>Evig storm, vindpiskade</td></tr>
+      <tr><td>III</td><td>Frosseri</td><td>Omåttlighet med mat/dryck</td><td>Liggande i smuts + slaskregn, Cerberus</td></tr>
+      <tr><td>IV</td><td>Girighet/Slöseri</td><td>Fel förhållande till ägodelar</td><td>Rullar stenar mot varandra</td></tr>
+      <tr><td>V</td><td>Vrede/Slöhet</td><td>Okontrollerad ilska / passiv sorg</td><td>Slåss på/under floden Styx</td></tr>
+      <tr><td>VI</td><td>Kätteri</td><td>Fel tro, förnekade själen</td><td>Brinnande gravar</td></tr>
+      <tr><td>VII</td><td>Våld (3 ringar)</td><td>Mot grannen / sig själv / Gud</td><td>Blodflod / skog av träd / brinnande öken</td></tr>
+      <tr><td>VIII</td><td>Bedrägeri (Malebolge)</td><td>10 typer av bedrägeri</td><td>10 Bolge med unika straff</td></tr>
+      <tr><td>IX</td><td>Förräderi (Cocytus)</td><td>Mot familj / fosterland / gäster / välgörare</td><td>Fruset i is. Lucifer tuggar Judas-Brutus-Cassius.</td></tr>
+    </table>
+  </div>
+</div>
+ 
+<!-- ========== PROV ========== -->
+<div id="prov" class="tab-content">
+  <div class="section">
+    <h2>✏️ 10 Kryssfrågor — Träna Inför Provet</h2>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 1</div>
+      <p>Vilket år föll Konstantinopel till osmanerna och satte fart på de geografiska upptäckterna?</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> 1389</label>
+        <label><input type="radio" name="q1"> 1453</label>
+        <label><input type="radio" name="q1"> 1492</label>
+        <label><input type="radio" name="q1"> 1519</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a1')">Visa svar</button>
+      <div id="a1" class="quiz-answer">✅ <strong>1453</strong>. Konstantinopels fall stängde handelsrutten till Asien, tvingade fram alternativa vägar och utlöste den europeiska expansionen västerut och österut om Afrika.</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 2</div>
+      <p>Vilken filosof myntade begreppet "tabula rasa" och ansåg att all kunskap kommer av empirisk erfarenhet?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> Thomas Hobbes</label>
+        <label><input type="radio" name="q2"> Jean-Jacques Rousseau</label>
+        <label><input type="radio" name="q2"> John Locke</label>
+        <label><input type="radio" name="q2"> Voltaire</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a2')">Visa svar</button>
+      <div id="a2" class="quiz-answer">✅ <strong>John Locke</strong>. Tabula rasa = vi föds som tomma blad. All kunskap kommer av sinnesupplevelser. Locke är liberalismens fader och empirismens herold.</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 3</div>
+      <p>Vilken sjöfarare genomförde den första världsomseglingen (1519–1522)?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> Vasco da Gama</label>
+        <label><input type="radio" name="q3"> Magellan</label>
+        <label><input type="radio" name="q3"> Bartolomeo Díaz</label>
+        <label><input type="radio" name="q3"> John Cabot</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a3')">Visa svar</button>
+      <div id="a3" class="quiz-answer">✅ <strong>Magellan</strong>. Beräknad tid över Stilla havet: 2 veckor, faktisk tid: 13 veckor. Magellan dog i Filippinerna. Ca 30 av hundratals man återvände. Bevisade att jordens omfång är enormt.</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 4</div>
+      <p>Vilken filosof förespråkade "allmänviljan" och direktdemokrati, och var den primära ideologiska inspirationen för den franska revolutionen?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> Voltaire</label>
+        <label><input type="radio" name="q4"> Montesquieu</label>
+        <label><input type="radio" name="q4"> Jean-Jacques Rousseau</label>
+        <label><input type="radio" name="q4"> Thomas Hobbes</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a4')">Visa svar</button>
+      <div id="a4" class="quiz-answer">✅ <strong>Jean-Jacques Rousseau</strong>. Hans begrepp "allmänviljan" och "naturrätten" + "alla människor är födda fria och lika" är Franska revolutionens ideologiska fundament.</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 5</div>
+      <p>Vad kallas det system som Axel Oxenstierna skapade för att institutionalisera adelns makt i Sverige?</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> Rådsväsendet</label>
+        <label><input type="radio" name="q5"> Kollegiesystemet</label>
+        <label><input type="radio" name="q5"> Riksdagssystemet</label>
+        <label><input type="radio" name="q5"> Ståndssamhället</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a5')">Visa svar</button>
+      <div id="a5" class="quiz-answer">✅ <strong>Kollegiesystemet</strong>. Makten delades upp på specialiserade departement (Krigskollegiet, Kammarkollegiet, Kanslikollegiet etc.) där ADELN hade monopol på tjänsterna. Det förste av sitt slag i Europa.</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 6</div>
+      <p>Vad kallas KANOT-modellens "A" i samband med den industriella revolutionen?</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> Ångmaskiner</label>
+        <label><input type="radio" name="q6"> Arbetskraft</label>
+        <label><input type="radio" name="q6"> Adam Smith</label>
+        <label><input type="radio" name="q6"> Amerika</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a6')">Visa svar</button>
+      <div id="a6" class="quiz-answer">✅ <strong>Arbetskraft</strong>. Skapades konstgjort via skiftesreformerna (enclosures) som tvingade småbönder in till städerna som billig fabriksarbetskraft.</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 7</div>
+      <p>Vilken princip, formulerad av Montesquieu, ligger till grund för USA:s konstitution?</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> Socialt kontrakt</label>
+        <label><input type="radio" name="q7"> Checks and balances</label>
+        <label><input type="radio" name="q7"> Allmänviljan</label>
+        <label><input type="radio" name="q7"> Tabula rasa</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a7')">Visa svar</button>
+      <div id="a7" class="quiz-answer">✅ <strong>Checks and balances</strong>. Montesquieus maktdelning i tre grenar (lagstiftande, verkställande, dömande) implementerades direkt i USA:s konstitution 1787. James Madison citerar Montesquieu explicit.</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 8</div>
+      <p>Vilket av följande alternativ beskriver KORREKT skillnaden i revolutionernas karaktär?</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> Franska revolutionen var ett frihetskrig mot ett utländskt förtryck</label>
+        <label><input type="radio" name="q8"> Amerikanska revolutionen var en radikal klassrevolution</label>
+        <label><input type="radio" name="q8"> Franska revolutionen var mer radikal och angrep hela ståndssamhällets logik</label>
+        <label><input type="radio" name="q8"> Amerikanska revolutionen avskaffade slaveriet direkt efter kriget</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a8')">Visa svar</button>
+      <div id="a8" class="quiz-answer">✅ <strong>Franska revolutionen var mer radikal och angrep hela ståndssamhällets logik</strong>. Den amerikanska var relativt konservativ — bevarade slaveriet, markägandet och den politiska elitens roll.</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 9</div>
+      <p>Vad kallas Karl XI:s process för att återta adelns mark och återföra den till kronan?</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> Defenestreringen</label>
+        <label><input type="radio" name="q9"> Kungaförsäkran</label>
+        <label><input type="radio" name="q9"> Reduktionen</label>
+        <label><input type="radio" name="q9"> Westfaliska freden</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a9')">Visa svar</button>
+      <div id="a9" class="quiz-answer">✅ <strong>Reduktionen</strong>. Karl X inledde och Karl XI fullbordade processen att juridiskt återta kronojord som felaktigt delats ut till adeln. Karl X:s rättegång kallades "Räfst och Rättarting".</div>
+    </div>
+ 
+    <div class="quiz-q">
+      <div class="qnum">Fråga 10</div>
+      <p>I vilken krets av Dantes helvete befinner sig förrädare mot välgörare — och vem av tre kända personer tuggas av Lucifer?</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> Krets VIII, Bolgia 9 — Caesar, Pompeius, Crassus</label>
+        <label><input type="radio" name="q10"> Krets IX, Judecca — Judas Iskariot, Brutus, Cassius</label>
+        <label><input type="radio" name="q10"> Krets VII — Alexander den store, Nero, Caligula</label>
+        <label><input type="radio" name="q10"> Krets VI — Luther, Kalvin, Kopernikus</label>
+      </div>
+      <button class="show-answer-btn" onclick="toggleAnswer('a10')">Visa svar</button>
+      <div id="a10" class="quiz-answer">✅ <strong>Krets IX, Judecca — Judas Iskariot, Brutus och Cassius</strong>. Den yttersta zonen av nionde kretsen. Lucifer sitter fastfrusen i isen och tuggar dessa tre förrädare mot välgörare (Jesus/Gud resp. Julius Caesar) i sina tre munnar.</div>
+    </div>
+  </div>
+ 
+  <div class="section">
+    <h2>📝 3 Analysfrågor — Med Modellsvar</h2>
+ 
+    <div class="analysis-q">
+      <div class="qnum">Analysfråga 1</div>
+      <h3>Varför började världsomseglingarna? Förklara den geografiska förändringsprocessens orsaker och verkan, med push- och pull-faktorer.</h3>
+      <div class="key-points">
+        <h4>Nyckelpoäng att ta upp (universitets-/A-nivå):</h4>
+        <ul>
+          <li><strong>Utlösande faktor (push):</strong> Konstantinopels fall 1453 → handelsblocke av ottomanerna → lyxvaror (kryddor, siden) försvinner för europeiska hov → panik</li>
+          <li><strong>Politiska orsaker:</strong> Stormaktstävlan Spanien–Portugal, prestige, kontroll</li>
+          <li><strong>Ekonomiska orsaker:</strong> Merkantilism = nollsummespel. Det gäller att ta resurser FÖRE konkurrenten. Silver, guld, kryddor = makt.</li>
+          <li><strong>Tekniska förutsättningar (pull):</strong> Karavellenr, sextant, kompass, bättre kartor</li>
+          <li><strong>Idémässiga orsaker:</strong> Renässansens nyfikenhet, Marco Polos berättelser, kuriosakabinetter som prestige</li>
+          <li><strong>Religionen (pull):</strong> Kyrkan vill missionera → nya skattebetalare + tävling med muslimer och protestanter om konvertiter</li>
+          <li><strong>Konsekvenser:</strong> Ny geografisk världsbild, Tordesillasfördraget, conquistadorerna, utrotning av urfolk (sjukdomar + militär), Spaniens silverekonomi och fall, England tar över</li>
+          <li><strong>Orsak-verkan-kedja:</strong> Konstantinopel → expeditioner → Ny Värld → conquistadorer → silver → inflation → Spaniens fall → England ny stormakt → triangelhandeln → industrialisering</li>
+        </ul>
+      </div>
+      <div class="summary-box" style="margin-top:1rem;">
+        <h4>Strukturell analys (A-poäng)</h4>
+        <p>Betona att de geografiska upptäckterna INTE är ett enskilt beslut utan en process med strukturella och tändande faktorer. Konstantinopels fall är gnistan — men de strukturella förutsättningarna (teknik, kapital, merkantilism, religiös ambition) var nödvändiga. Ta upp att Spaniens fall är ett tidigt empiriskt bevis för att resursberoende utan produktionsutveckling leder till ekonomisk kollaps.</p>
+      </div>
+    </div>
+ 
+    <div class="analysis-q">
+      <div class="qnum">Analysfråga 2</div>
+      <h3>Jämför upplysningsfilosoferna. Varför och hur skiljer sig deras samhällsidéer åt? Vem kopplas till vilken revolution?</h3>
+      <div class="key-points">
+        <h4>Nyckelpoäng att ta upp:</h4>
+        <ul>
+          <li><strong>Gemensam grund:</strong> Alla bygger på empirism och förnuft. Alla kritiserar (i varierande grad) kyrkan. Alla har ett "socialt kontrakt" som utgångspunkt.</li>
+          <li><strong>More vs Hobbes:</strong> More = gemensamt ägande, jämlikhet (socialism). Hobbes = stark stat skyddar äganderätt (auktoritarism). Diametralt olika syn på privatägandets roll.</li>
+          <li><strong>Hobbes vs Locke:</strong> Hobbes = pessimistisk natursyn, överlåter all makt, ingen revolutionsrätt. Locke = rationell natur, delegerar makt, revolutionsrätt. Skiljer sig i kontraktets karaktär.</li>
+          <li><strong>Rousseau vs Voltaire:</strong> Rousseau = direktdemokrati, allmänvilja, naturrätt, privatägandet är problemet. Voltaire = upplyst despot, individen primär, folket oupplyst. Grundläggande oenighet om VEM som äger upplysningen.</li>
+          <li><strong>Montesquieu:</strong> Varken despot eller direktdemokrati. Maktdelning i 3 grenar = checks and balances. Institutioner > individer.</li>
+          <li><strong>Kopplingarna:</strong> Rousseau → Franska revolutionen. Locke + Montesquieu + Paine → Amerikanska revolutionen + USA:s konstitution. Voltaire → Fredrik den store (reformabsolutism). More → socialismen + Marx.</li>
+          <li><strong>Historiebruk:</strong> Varje filosof används idag: Locke av liberaler, Rousseau av demokrater, Hobbes av auktoritärer, More/Marx av socialister.</li>
+        </ul>
+      </div>
+    </div>
+ 
+    <div class="analysis-q">
+      <div class="qnum">Analysfråga 3</div>
+      <h3>Jämför den amerikanska och franska revolutionen: orsaker, deltagare, och orsak–verkan. Hur skiljer de sig åt?</h3>
+      <div class="key-points">
+        <h4>Nyckelpoäng att ta upp:</h4>
+        <ul>
+          <li><strong>Gemensamma orsaker:</strong> Båda inspirerade av upplysningsidéerna. Båda reagerar mot förtryck och brist på representation. Direkt länk via Lafayette.</li>
+          <li><strong>Amerikanska orsaker (specifika):</strong> Kolonisterna representeras inte i det brittiska parlamentet. Skattelagar (Stamp Act, Tea Act, Navigation Act). "No taxation without representation." Ny amerikansk identitet. Sjuårskrigets skulder.</li>
+          <li><strong>Franska orsaker (8 stycken):</strong> Orättvis maktfördelning, höga skatter, nationella skulder, missväxt, upplysningsidéer, höjda brödpriser, ny borgarklass, hovets lyxliv.</li>
+          <li><strong>Deltagare:</strong> Amerikanska = välbärgade vita engelskamerikaner + lite folkliga element. Franska = 98% tredje ståndet + bönder + borgarklass + urfattiga + KVINNOR (brödfrågan).</li>
+          <li><strong>Konsekvenser:</strong> Amerikanska = stabil konstitution, kapitalism bevaras, slaveriet fortsätter. Franska = skräckvälde, kungen avrättas, Napoleon, mer radikal men instabil.</li>
+          <li><strong>Filosofisk inspirationskälla:</strong> Amerikanerna → Locke. Fransmännen → Rousseau. (Montesquieu i båda.)</li>
+          <li><strong>Karaktär:</strong> Amerikanerna konservativt (bevarar struktur, ändrar styrelseskick). Franskt radikalt (angriper hela samhällsstrukturen).</li>
+          <li><strong>Varför franska mer instabil?</strong> Bredare och djupare social revolution. Ekonomisk kris och svält som driver desperata åtgärder. Ingen upparbetad demokratisk tradition. Skräckväldet = revolutionen äter sina egna (Robespierre avrättas).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<script>
+  // Tab switching
+  function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+ 
+  // Answer toggle
+  function toggleAnswer(id) {
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === 'block' ? 'none' : 'block';
+  }
+ 
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+    document.getElementById('prog').style.width = pct + '%';
+  });
+</script>
+</body>
+</html>
+ 
